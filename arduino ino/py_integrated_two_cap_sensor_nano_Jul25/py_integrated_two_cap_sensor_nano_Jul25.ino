@@ -34,12 +34,12 @@ const int threshold_center_2 = 20;
 bool touch_active = false;
 unsigned long touch_start_time = 0;
 unsigned long touch_duration = 0;
-const int set_touch_duration = 1000;
+int set_touch_duration = 1000;
 //for opening solenoid
 bool sol_open = false;
 unsigned long sol_start_time = 0;
 unsigned long sol_duration = 0;
-const int set_sol_duration = 50;
+int set_sol_duration = 20;
 //for solenoid pin status check
 int pinState = 0;
 void setup() {
@@ -64,14 +64,18 @@ void loop() {
   //check for start, stop commands from python 
   //set state as arduino_doing_things (run it) or not (dont run script)
   if (Serial.available()>0){
-    char command = Serial.read();
+    //char command = Serial.read(); //original, can use when only sending letter commands. 
+    String command = Serial.readStringUntil('\n');  // Read the command until a newline character
+    command.trim();  // Remove any extra whitespace
     if (command == 'S'){
       arduino_doing_things = true;
       Serial.println("Arduino doing things, Arduino started");
     } else if (command == 'X'){
       arduino_doing_things = false;
       Serial.println("Arduino not doing things, Arduino stopped");
-    }
+    } else if (command.startsWith('SET_TOUCH=')){
+      set_touch_duration = 
+    } else if (command.startsWith())
   }
 
   if(arduino_doing_things){
@@ -106,7 +110,7 @@ void loop() {
         digitalWrite(OUT_TO_LED_2, LOW);
         digitalWrite(OUT_TO_UNO_2, LOW);
       }//END REPORTER LED.
-  /*
+  //break *
       //BAR(SENSOR_1)DETECTION
       if (sensorValue_1 > threshold_center_1){
         if (!touch_active){ //one time measurement of touch_start_time per event
@@ -143,7 +147,7 @@ void loop() {
         sol_start_time = millis();
         sol_duration=0;
       }
-      */
+      //breal *
       // Short delay before the next loop iteration
       delay(5);
   }
