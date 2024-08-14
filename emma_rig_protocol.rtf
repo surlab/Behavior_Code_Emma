@@ -58,4 +58,11 @@ Want to be able to define these arduino variables from python\
 \outl0\strokewidth0 \strokec2 const\cf4 \strokec4  \cf2 \strokec2 int\cf4 \strokec4  set_touch_duration = \cf5 \strokec5 1000\cf4 \strokec4 ;\cb1 \
 
 \f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 check if its actually 1 full second between each solenoid activation because it doesn\'92t seem like it is?\
-}
+\
+In the arduino code, it searches the serial commands for SET_TOUCH= or SET_SOL= coming from python. \
+Then it takes the remaining part of the string, converts to int, and updates the respective variable to that value. This is a possible source of error but worth adding for the flexibility. \
+\
+If something is off with the timing of the Touch Bar requirement or the solenoid opening times, please check that the value they are being set to is what you expect (set_sol_duration should be around 10-50 msec; set_touch_duration should be about 1000 msec). \
+\
+\
+#NEXT TO DO, UPDATE THE FILE SAVING SYSTEM :-)}

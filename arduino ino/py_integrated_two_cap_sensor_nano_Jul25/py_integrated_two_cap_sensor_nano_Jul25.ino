@@ -70,12 +70,18 @@ void loop() {
     if (command == 'S'){
       arduino_doing_things = true;
       Serial.println("Arduino doing things, Arduino started");
+      Serial.println("default touch duration: " + String(set_touch_duration) + "ms");
+      Serial.println("default solenoid open for " + String(set_sol_duration) + "ms");
     } else if (command == 'X'){
       arduino_doing_things = false;
       Serial.println("Arduino not doing things, Arduino stopped");
-    } else if (command.startsWith('SET_TOUCH=')){
-      set_touch_duration = 
-    } else if (command.startsWith())
+    } else if (command.startsWith("SET_TOUCH=")){ //takes string starting from position 10 on
+      set_touch_duration = command.substring(10).toInt();
+      Serial.println("Touch duration updated to " + String(set_touch_duration) + " ms"); 
+    } else if (command.startsWith("SET_SOL=")){ //takes string starting from position 8 on
+      set_sol_duration = command.substring(8).toInt();
+      Serial.println("Solenoid open duration updated to " + String(set_sol_duration) + " ms");
+    }
   }
 
   if(arduino_doing_things){
