@@ -145,7 +145,7 @@ void loop() {
         sol_start_time = millis();
         sol_duration=0;
       }
-      //breal *
+      //break *
       // Short delay before the next loop iteration
       delay(1);
   }
