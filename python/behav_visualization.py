@@ -427,3 +427,65 @@ print(mean_unique_slices)
 
 std_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].std().reset_index()
 print(std_unique_slices)
+#%%
+min_bar_hold = 1.5 #sec
+filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
+df = get_txt_df(filepath)
+trial_start = df[df['Solenoid']==True]['Timestamp']
+trial_dur = trial_start.diff().shift(-1) #diff between previous and next timestamp
+trial_dur = trial_dur.dt.total_seconds().fillna(min_bar_hold) 
+#trial_end as next solenoid activation time OR 10 seconds after start of current trial (within row). choose lowest value 
+#test each set between trial_start and trial_end to see if lick_detected, try not to use for loop operation 
+#use pandas <> indexing to get subset of df that corresponds to that trial
+#count number of true lick_detected, if above 0, return lick detected for trial woo
+#%%
+#diff between previous and next timestamp
+set_trial_dur = trial_start+pd.Timedelta(seconds=10) #seconds
+trial_dur = #min between calcualted trial_dur or set_trial_dur
+#group subsets of df by trial, determine if lick_detected has a true value or not
+#report trial start time, trial duration, if lick detected in trial in a new compressed df 
+#%%
+def analyze_trials(df):
+    # Ensure Timestamp is in datetime format
+    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+    
+    # Create a list to store trial information
+    trials = []
+    
+    # Filter solenoid activation events
+    solenoid_df = df[df['Solenoid'] == True]
+    
+    for i, solenoid_row in solenoid_df.iterrows():
+        # Trial starts at solenoid activation
+        trial_start = solenoid_row['Timestamp']
+        
+        # Find the next solenoid activation or the end of the dataframe
+        if i + 1 < len(solenoid_df):
+            next_solenoid = solenoid_df.iloc[i + 1]['Timestamp']
+        else:
+            next_solenoid = df['Timestamp'].max()  # End of the dataframe
+            
+        # Trial ends either after 10 seconds or at the next solenoid activation, whichever comes first
+        trial_end = min(trial_start + pd.Timedelta(seconds=10), next_solenoid)
+        
+        # Filter data for the current trial
+        trial_data = df[(df['Timestamp'] >= trial_start) & (df['Timestamp'] < trial_end)]
+        
+        # Check if a lick was detected within the trial
+        lick_detected = trial_data['Lick_Detected'].any()
+        
+        # Append trial information to the list
+        trials.append({
+            'Trial_Start': trial_start,
+            'Trial_End': trial_end,
+            'Lick_Detected': lick_detected
+        })
+    
+    # Convert the trial information into a DataFrame for analysis
+    trial_df = pd.DataFrame(trials)
+    
+    # Calculate total number of trials and trials where a lick was detected
+    total_trials = len(trial_df)
+    trials_with_lick = trial_df['Lick_Detected'].sum()
+
+    return total_trials, trials_with_lick, trial_df
