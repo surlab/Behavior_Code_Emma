@@ -407,8 +407,8 @@ for txt in txt_files:
     i+=1
     #if i>3:
      #   break  
-#%%
-#save to csv 
+
+#SAVE to csv 
 save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary'
 output_csv_path = os.path.join(save_path, "raw_behavior_summary.csv")
 behav_df.to_csv(output_csv_path, index=False)
@@ -432,7 +432,7 @@ print(f"Standard Deviation: {stdev_value}")
 print(f"Lick Detection Threshold: {threshold}")
 print(f"Number of Licks Detected: {num_licks}")
 
-#%% to get some summary values?
+#%% UPDATE FOR BEHAV BASED METRICS to get some summary values?
 # Group by 'AnimalID' and 'Region', then calculate unique slices per group
 summary = behav_df.groupby(['AnimalID', 'Origin', 'Region'])['Slice'].nunique().reset_index()
 
@@ -447,7 +447,7 @@ print(mean_unique_slices)
 
 std_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].std().reset_index()
 print(std_unique_slices)
-#%% get trial based data, depricate when you graduate from the txt file acquisition (eyeroll)
+#%% test code. get trial based data, depricate when you graduate from the txt file acquisition (eyeroll)
 
 def trial_lick(row,df):
     '''extract each set between trial_start and trial_end to see if lick_detected, try not to use for loop operation 
@@ -479,7 +479,7 @@ trial_df = pd.DataFrame({
 trial_df['Lick_Detected'] = trial_df.apply(trial_lick, axis=1,df=df)
 #report trial start time, trial duration, if lick detected in trial in a new compressed df 
 print(trial_df)
-#%% functions to get by trial, and session performance
+#%% * functions to get by trial and by session performance
 def trial_lick_detect(row,df):
     '''
     row : row of pandas df
@@ -549,8 +549,7 @@ def sess_performance(filepath, min_bar_hold=1.5, max_trial_dur=10):
         'lick_trials': [lick_trials],
         'session_duration_min': [session_duration]
     })
-#%% test new summary
-# Main script
+#%% * SUMMARIZE behavioral data by session :-)
 data_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data'
 txt_files = get_txt_path(data_path)  # This should return a list of file paths
 pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})")
@@ -567,15 +566,18 @@ for txt in txt_files:
         print(f"Error processing file: '{txt}' Error: {e}")
         continue
 
-#%%
-#save to csv 
+#SAVE to csv 
 save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary'
 output_csv_path = os.path.join(save_path, "behavior_summary.csv")
 behav_df.to_csv(output_csv_path, index=False)
 print(f"Saved measurements to {output_csv_path}")
-#%%
-now we need to batchify the above to all txt files, and also probably just make that into a function to simplify the looping
-then record the second order compression of trial performance into a summary df. do i want to save the first order compression? i dont think so but idk. 
+
+#%% sort behav summary by animal and plot 
+animal277N = behav_summary[behav_summary['animal_ID']=='277N']
+animal277N = animal277N[animal277N['session_duration_min']>10]
+#plt.plot()
+animal277T = behav_summary[behav_summary['animal_ID']=='277T']
+animal277T = animal277T[animal277T['session_duration_min']>10]
 #%% DEPRICATED was from chatgpt
 def analyze_trials(df):
     # Ensure Timestamp is in datetime format
