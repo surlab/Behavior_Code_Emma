@@ -41,6 +41,10 @@ def get_txt_path(directory):
     return txt_files
 
 def get_txt_df(filepath):
+    if os.path.getsize(filepath) == 0:
+        print(f"Skipping {filepath}: File is empty")
+        return None  # Skip empty files
+
     #includes substantial preprocessing to make a useable dataframe!
     df = pd.read_csv(filepath, sep='-', header=None, on_bad_lines='skip')
     df = df.reset_index()
@@ -207,6 +211,22 @@ for filename in files:
         os.makedirs(save_dir, exist_ok=True)
         # Move the file to the new directory
         shutil.move(os.path.join(source_dir, filename), os.path.join(save_dir, filename))
+#%% * delete empty text files
+
+def delete_empty_txt_files(directory):
+    for dirpath, _, filenames in os.walk(directory):
+        for file in filenames:
+            if file.endswith(".txt"):
+                filepath = os.path.join(dirpath, file)
+                # Check if the file is empty
+                if os.path.getsize(filepath) == 0:
+                    print(f"Deleting empty file: {filepath}")
+                    os.remove(filepath)
+
+# Example usage
+directory_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data'  # Replace with the path to your directory
+delete_empty_txt_files(directory_path)
+
 #%% ignore unless... in the case you would like to make subdirectories for dates
 # Define the directory containing the files
 source_dir = '/path/to/your/lick_reaching_data'
@@ -268,7 +288,7 @@ df['Animal_ID'] = animal_ID
 df['Stage'] = stage
 df['File_Timestamp'] = timestamp
 #%% specific session plot
-filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_Reach_20240823_000031.txt'
+filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
 filename = os.path.basename(filepath)
 df = get_txt_df(filepath)
 # Regular expression to extract animal_ID, stage, and timestamp
@@ -286,7 +306,7 @@ smoothed_plot(df, animal_ID = animal_ID, date=date, stage=stage, kernel_size = 9
 '''despite agg. capability, this is not the best place to aggeregate the data
 should summarize after you have some performance criteria. 
 use this script for visualization of performance criteria as you develop them'''
-animal_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T'
+animal_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277T'
 #get list of behav files 
 txt_files = get_txt_path(animal_path)
 #parse to extract animal_ID, stage, and timestamp
@@ -323,7 +343,7 @@ for txt in txt_files:
     
     basic_plot(df, animal_ID = animal_ID, date=date, stage=stage, dots=True, which_dots='Lick_Detected')
     fs = get_sampling_rate(df) #prev used as inputs to lowpass filter
-    smoothed_plot(df, animal_ID = animal_ID, date=date, stage=stage, kernel_size = 99, dots=True, which_dots='Lick_Detection')
+    smoothed_plot(df, animal_ID = animal_ID, date=date, stage=stage, kernel_size = 99, dots=True, which_dots='Lick_Detected')
     ##behav_df = pd.concat([behav_df,df],sort=False)
     i+=1
    #if i>3:
@@ -427,23 +447,86 @@ print(mean_unique_slices)
 
 std_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].std().reset_index()
 print(std_unique_slices)
-#%%
+#%% get trial based data, depricate when you graduate from the txt file acquisition (eyeroll)
+
+def trial_lick(row,df):
+    '''extract each set between trial_start and trial_end to see if lick_detected, try not to use for loop operation 
+    record binary value if lick detected
+        '''
+    mask = (df['Timestamp'] >= row['trial_start']) & (df['Timestamp']<= row['trial_end'])
+    return int(df.loc[mask,'Lick_Detected'].any())
+
 min_bar_hold = 1.5 #sec
+max_trial_dur = 10 #sec
 filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
 df = get_txt_df(filepath)
-trial_start = df[df['Solenoid']==True]['Timestamp']
+trial_start = df[df['Solenoid']==True]['Timestamp'].reset_index(drop=True)
 trial_dur = trial_start.diff().shift(-1) #diff between previous and next timestamp
 trial_dur = trial_dur.dt.total_seconds().fillna(min_bar_hold) 
 #trial_end as next solenoid activation time OR 10 seconds after start of current trial (within row). choose lowest value 
-#test each set between trial_start and trial_end to see if lick_detected, try not to use for loop operation 
-#use pandas <> indexing to get subset of df that corresponds to that trial
-#count number of true lick_detected, if above 0, return lick detected for trial woo
-#%%
-#diff between previous and next timestamp
-set_trial_dur = trial_start+pd.Timedelta(seconds=10) #seconds
-trial_dur = #min between calcualted trial_dur or set_trial_dur
-#group subsets of df by trial, determine if lick_detected has a true value or not
+    #trial_end = min(trial_start+trial_dur,10)
+trial_end_est = trial_start + pd.to_timedelta(trial_dur, unit='s')
+trial_end_10sec = trial_start + pd.to_timedelta(max_trial_dur, unit='s')
+
+# For each trial, take the minimum of trial_end or trial_start + 10 seconds
+trial_end = pd.DataFrame({'trial_end': trial_end_est, 'trial_end_10sec': trial_end_10sec}).min(axis=1)
+#create trial_df 
+trial_df = pd.DataFrame({
+    'trial_start': trial_start,
+    'trial_end': trial_end
+    })
+#apply trial_lick function to get lick detection per trial (passes each row of trial_df to trial_lick_detect)
+trial_df['Lick_Detected'] = trial_df.apply(trial_lick, axis=1,df=df)
 #report trial start time, trial duration, if lick detected in trial in a new compressed df 
+print(trial_df)
+#%% functions to get by trial, and session performance
+def trial_lick_detect(row,df):
+    '''
+    row : row of pandas df
+        has trial start and trial end time
+    df: this should be the df extracted from txt file with all sensor data. 
+    filters parent df to individual trials using start and end times
+    records if any lick was detected during that trial period
+    '''
+    mask = (df['Timestamp'] >= row['trial_start']) & (df['Timestamp']<= row['trial_end'])
+    return int(df.loc[mask,'Lick_Detected'].any())
+    
+def trial_performance(filepath, min_bar_hold = 1.5, max_trial_dur = 10):
+    #do trial processing in here ! lah lah lah
+    df = get_txt_df(filepath)
+    trial_start = df[df['Solenoid']==True]['Timestamp'].reset_index(drop=True)
+    trial_dur = trial_start.diff().shift(-1) #diff between previous and next timestamp
+    trial_dur = trial_dur.dt.total_seconds().fillna(min_bar_hold) 
+    #determine trial end time esitmate and max
+    trial_end_est = trial_start + pd.to_timedelta(trial_dur, unit='s')
+    trial_end_10sec = trial_start + pd.to_timedelta(max_trial_dur, unit='s')
+    # For each trial, take the minimum of trial_end or trial_start + 10 seconds
+    trial_end = pd.DataFrame({'trial_end': trial_end_est, 'trial_end_10sec': trial_end_10sec}).min(axis=1)
+    #create trial_df 
+    trial_df = pd.DataFrame({
+        'trial_start': trial_start,
+        'trial_end': trial_end
+        })
+    #apply trial_lick function to get lick detection per trial (passes each row of trial_df to trial_lick_detect)
+    trial_df['Lick_Detected'] = trial_df.apply(trial_lick_detect, axis=1,df=df)
+    #report trial start time, trial duration, if lick detected in trial in a new compressed df 
+    return trial_df
+
+#test function
+min_bar_hold = 1.5 #sec
+max_trial_dur = 10 #sec
+filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
+trial_perf = trial_performance(filepath, min_bar_hold, max_trial_dur)
+
+def sess_performance():
+    #record total number of trials (bar_holds), num of trials w lick , duration of session (min), what else??
+    #filename, animal_ID, stage, date, total start time, 
+    return
+
+#then batchify sess_performance to summarizer all of the data or at least per animal
+#%%
+now we need to batchify the above to all txt files, and also probably just make that into a function to simplify the looping
+then record the second order compression of trial performance into a summary df. do i want to save the first order compression? i dont think so but idk. 
 #%%
 def analyze_trials(df):
     # Ensure Timestamp is in datetime format
