@@ -410,7 +410,7 @@ for txt in txt_files:
 #%%
 #save to csv 
 save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary'
-output_csv_path = os.path.join(save_path, "behavior_summary.csv")
+output_csv_path = os.path.join(save_path, "raw_behavior_summary.csv")
 behav_df.to_csv(output_csv_path, index=False)
 print(f"Saved measurements to {output_csv_path}")
 #%% test lick threshold
@@ -512,22 +512,71 @@ def trial_performance(filepath, min_bar_hold = 1.5, max_trial_dur = 10):
     #report trial start time, trial duration, if lick detected in trial in a new compressed df 
     return trial_df
 
-#test function
-min_bar_hold = 1.5 #sec
+#test trial_performance function 
+'''min_bar_hold = 1.5 #sec
 max_trial_dur = 10 #sec
 filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
-trial_perf = trial_performance(filepath, min_bar_hold, max_trial_dur)
+trial_perf = trial_performance(filepath, min_bar_hold, max_trial_dur)'''
 
-def sess_performance():
-    #record total number of trials (bar_holds), num of trials w lick , duration of session (min), what else??
-    #filename, animal_ID, stage, date, total start time, 
-    return
+def sess_performance(filepath, min_bar_hold=1.5, max_trial_dur=10):
+    trial_df = trial_performance(filepath, min_bar_hold, max_trial_dur)
+    total_trials = len(trial_df)
+    lick_trials = trial_df['Lick_Detected'].sum()
+    session_start = trial_df['trial_start'].min()
+    session_end = trial_df['trial_end'].max()
+    session_duration = (session_end - session_start).total_seconds() / 60  # duration in minutes
+    
+    filename = os.path.basename(filepath)
+    match = re.match(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})", filename)
+    if match:
+        animal_ID, stage, date, start_time = match.groups()
+    else:
+        raise ValueError(f"Filename '{filename}' does not match pattern")
+    
+    start_time = pd.to_datetime(start_time, format='%H%M%S')
+    if start_time.hour < 6:
+        date = pd.to_datetime(date, format='%Y%m%d') - pd.Timedelta(days=1)
+    else:
+        date = pd.to_datetime(date, format='%Y%m%d')
+    
+    return pd.DataFrame({
+        'filename': [filename],
+        'animal_ID': [animal_ID],
+        'stage': [stage],
+        'date': [date.strftime('%Y-%m-%d')],
+        'start': [start_time.strftime('%H:%M:%S')],
+        'total_trials': [total_trials],
+        'lick_trials': [lick_trials],
+        'session_duration_min': [session_duration]
+    })
+#%% test new summary
+# Main script
+data_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data'
+txt_files = get_txt_path(data_path)  # This should return a list of file paths
+pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})")
 
-#then batchify sess_performance to summarizer all of the data or at least per animal
+behav_summary = pd.DataFrame()
+
+for txt in txt_files:
+    try:
+        # Use the session performance function to get summarized metrics for each session
+        sess_summary = sess_performance(txt)
+        # Append the summary to the main DataFrame
+        behav_summary = pd.concat([behav_summary, sess_summary], ignore_index=True, sort=False)
+    except Exception as e:
+        print(f"Error processing file: '{txt}' Error: {e}")
+        continue
+
+#%%
+#save to csv 
+save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary'
+output_csv_path = os.path.join(save_path, "behavior_summary.csv")
+behav_df.to_csv(output_csv_path, index=False)
+print(f"Saved measurements to {output_csv_path}")
 #%%
 now we need to batchify the above to all txt files, and also probably just make that into a function to simplify the looping
 then record the second order compression of trial performance into a summary df. do i want to save the first order compression? i dont think so but idk. 
-#%%
+#%% DEPRICATED was from chatgpt
 def analyze_trials(df):
     # Ensure Timestamp is in datetime format
     df['Timestamp'] = pd.to_datetime(df['Timestamp'])
