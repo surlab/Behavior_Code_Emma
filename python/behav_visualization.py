@@ -136,6 +136,11 @@ def get_sampling_rate(df):
     df.drop(['Time_Diff'], axis=1, inplace=True, errors='ignore')
     print(sampling_freq)
     return(sampling_freq)
+
+#%%test get_sample_rate 
+filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277T/277T_LickReach_20240909_155753.txt'
+df = get_txt_df(filepath)
+sr = get_sampling_rate(df)
 #%%  *visualization functions
 #maybe downsample before simple visualizaiton plots... 
 #cant downsample lick and bar the same factpr (temporal res of lick sensor is way more important than the bar temporal resolution)
