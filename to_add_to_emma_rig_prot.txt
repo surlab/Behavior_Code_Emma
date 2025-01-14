@@ -1,0 +1,21 @@
+okay weird. im going to document 2P3 nidaq/bnc setup
+
+on 2P3 computer: PCI 6052E AI5 is connected to 
+USER 1 (P0.1) on the behav PC and is connected to 
+USER 2 () on the camera PC (leftmost). 
+
+These are digital ports on the behav/camera PC nidaqs. 
+BUT strangely it goes to an analog port on the 2p3 nidaq. 
+When i do voltage recordings in bruker software, it has a weird shape 
+but seems to be post processed into square waves. so like it works?
+but im literally sending a digital pulse sequence to the AI5 channel.
+I wonder if theres any temporal precision loss sending digital to analog. 
+
+
+okay so i decreased the signal duration to 50 msec. 
+now it looks jagged like triangle function during recording,
+but after its done it looks like a squarew wave! is this a function of prarie view?
+
+i succesfully tested 30 msec pulses from a different port2/line4 
+P2.4 PFI(BNC) on behav pc nidaq to AI4 on 2p3 nidaq. it reads spiky in real time, 
+but turns into a proper square wave after imaging finishes. 

@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd 
 import seaborn as sns
 import matplotlib.pyplot as plt
+import seaborn as sns
 import os 
 import glob
 import re
@@ -169,7 +170,7 @@ def basic_plot(df, animal_ID, date, stage, dots = True, which_dots = 'Solenoid')
 #example/test call
 #basic_plot(df,animal_ID,date,stage='Lick', dots=True, which_dots='Lick_Detected') 
 
-def smoothed_plot(df, animal_ID, date, stage,order=2,kernel_size=30,dots = True, which_dots = 'Solenoid'):
+def smoothed_plot(df, animal_ID, date, stage,order=2,kernel_size=30,dots = True, which_dots = 'Solenoid',save=False, directory='none'):
     #fs_lick,fs_bar,cutoff_freq=0.2 used to be inputs for low-pass filter
     # Apply downsampling
     lick_df = df[df['Sensor'] == 'lick'].iloc[::10, :]
@@ -198,7 +199,11 @@ def smoothed_plot(df, animal_ID, date, stage,order=2,kernel_size=30,dots = True,
     plt.xticks(rotation=45) 
     plt.title(f"{stage} Animal {animal_ID} - {date} \n bar: median_filter lick: savgol_filter")
     plt.legend()
+    if save:
+        save_path = directory +'/pdf/' + f'{animal_ID}_smoothed_lick_bar_plot.pdf'
+        plt.savefig(save_path, format = 'pdf')
     plt.show()
+
 #%% * organize files into folders by animal_ID
 # Define the directory containing the files
 source_dir = '//Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data'
@@ -279,7 +284,7 @@ df.drop(labels=['Print'],axis=1,inplace=True)
 #df.dropna(axis=0,inplace=True)
 df = df.sort_values(by='Timestamp')
 # Regular expression to extract animal_ID, stage, and timestamp
-pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8}_\d{6})")
+pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8}_\d{6})")
 # Extracting the components from the filename
 match = pattern.match(filename)
 if match:
@@ -293,11 +298,11 @@ df['Animal_ID'] = animal_ID
 df['Stage'] = stage
 df['File_Timestamp'] = timestamp
 #%% specific session plot
-filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
+filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277T/277T_LickReach_20240911_212833.txt'
 filename = os.path.basename(filepath)
 df = get_txt_df(filepath)
 # Regular expression to extract animal_ID, stage, and timestamp
-pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8}_\d{6})")
+pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8}_\d{6})")
 # Extracting the components from the filename
 match = pattern.match(filename)
 if match:
@@ -305,17 +310,18 @@ if match:
     stage = match.group(2)
     timestamp = match.group(3)
 basic_plot(df, animal_ID = animal_ID, date=date, stage=stage, dots=True, which_dots='Lick_Detected')
-smoothed_plot(df, animal_ID = animal_ID, date=date, stage=stage, kernel_size = 99, dots=True, which_dots='Lick_Detected')
+save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/visualizations'
+smoothed_plot(df, animal_ID = animal_ID, date=date, stage=stage, kernel_size = 99, dots=True, which_dots='Lick_Detected',save=True,directory=save_path)
 #%% * plot all sessions. has capability to aggregate the raw data across all sessions
 #NEED TO FIX GET_TXT_DF TO BE ABLE TO PLOT ALL SESSIONS , REINDEX WAS CUSTOMIZED AND DOESNT NOT APPLY TO NEW TXT FILES UGH
 '''despite agg. capability, this is not the best place to aggeregate the data
 should summarize after you have some performance criteria. 
 use this script for visualization of performance criteria as you develop them'''
-animal_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277T'
+animal_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277N'
 #get list of behav files 
 txt_files = get_txt_path(animal_path)
 #parse to extract animal_ID, stage, and timestamp
-pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})")
+pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8})_(\d{6})")
 #initialize master df 
 ##behav_df = pd.DataFrame()
 i=0
@@ -361,7 +367,7 @@ data_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_
 #get list of behav files 
 txt_files = get_txt_path(data_path)
 #parse to extract animal_ID, stage, and timestamp
-pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})")
+pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8})_(\d{6})")
 #initialize behav df 
 behav_df = pd.DataFrame()
 i=0
@@ -438,6 +444,7 @@ print(f"Lick Detection Threshold: {threshold}")
 print(f"Number of Licks Detected: {num_licks}")
 
 #%% UPDATE FOR BEHAV BASED METRICS to get some summary values?
+#behav_df = pd.read_csv('/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary/behavior_summary.csv')
 # Group by 'AnimalID' and 'Region', then calculate unique slices per group
 summary = behav_df.groupby(['AnimalID', 'Origin', 'Region'])['Slice'].nunique().reset_index()
 
@@ -532,7 +539,7 @@ def sess_performance(filepath, min_bar_hold=1.5, max_trial_dur=10):
     session_duration = (session_end - session_start).total_seconds() / 60  # duration in minutes
     
     filename = os.path.basename(filepath)
-    match = re.match(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})", filename)
+    match = re.match(r"(\d{3,4}[A-Z])_(.+?)_(\d{8})_(\d{6})", filename)
     if match:
         animal_ID, stage, date, start_time = match.groups()
     else:
@@ -552,12 +559,12 @@ def sess_performance(filepath, min_bar_hold=1.5, max_trial_dur=10):
         'start': [start_time.strftime('%H:%M:%S')],
         'total_trials': [total_trials],
         'lick_trials': [lick_trials],
-        'session_duration_min': [session_duration]
+        'duration_min': [session_duration]
     })
 #%% * SUMMARIZE behavioral data by session :-)
 data_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data'
 txt_files = get_txt_path(data_path)  # This should return a list of file paths
-pattern = re.compile(r"(\d{3}[A-Z])_(.+?)_(\d{8})_(\d{6})")
+pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8})_(\d{6})")
 
 behav_summary = pd.DataFrame()
 
@@ -576,13 +583,105 @@ save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary'
 output_csv_path = os.path.join(save_path, "behavior_summary.csv")
 behav_df.to_csv(output_csv_path, index=False)
 print(f"Saved measurements to {output_csv_path}")
-
+#%% DELETE OR MOVE ALL OF THIS SOMEWHERE ELSE PLEASE ITS LIKE TOO MESSY FOR THIS SCRIPT
+#%% if not rerunning summarize
+#behav_summary = pd.read_csv('/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary/behavior_summary.csv')
+behav_summary['p_lick_trials'] = 100*behav_summary['lick_trials']/behav_summary['total_trials']
 #%% sort behav summary by animal and plot 
 animal277N = behav_summary[behav_summary['animal_ID']=='277N']
 animal277N = animal277N[animal277N['session_duration_min']>10]
 #plt.plot()
 animal277T = behav_summary[behav_summary['animal_ID']=='277T']
 animal277T = animal277T[animal277T['session_duration_min']>10]
+#%%
+#behav_summary = behav_summary.replace('4932T','4432T')
+animal4432T = behav_summary[behav_summary['animal_ID']=='4432T']
+animal4432T = animal4432T[animal4432T['session_duration_min']>10]
+#%%
+behav_summary = behav_summary.replace('4944T','4844T')
+animal4844T = behav_summary[behav_summary['animal_ID']=='4844T']
+animal4844T = animal4844T[animal4844T['session_duration_min']>10]
+#%%
+animal808T = behav_summary[behav_summary['animal_ID']=='808T']
+animal808T = animal808T[animal808T['session_duration_min']>10]
+#plt.plot()
+animal807T = behav_summary[behav_summary['animal_ID']=='807T']
+animal807T = animal807T[animal807T['session_duration_min']>10]
+#%%
+animal806N = behav_summary[behav_summary['animal_ID']=='806N']
+animal806N = animal806N[animal806N['session_duration_min']>10]
+#%% plot specific animal session performance, or just per animal?? 
+animal277N = animal277N.sort_values(by='date')
+sns.scatterplot(data = animal277N, x ='date',y='lick_trials', hue='stage')
+plt.title('277N')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal277T = animal277T.sort_values(by='date')
+sns.scatterplot(data = animal277T, x ='date',y='lick_trials', hue='stage')
+plt.title('277T')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal4432T = animal4432T.sort_values(by='date')
+sns.scatterplot(data = animal4432T, x ='date',y='lick_trials', hue='stage')
+plt.title('4432T')
+#%% plot specific animal session performance, or just per animal?? 
+animal4844T = animal4844T.sort_values(by='date')
+sns.scatterplot(data = animal4844T, x ='date',y='lick_trials', hue='stage')
+plt.title('4844T')
+#%% plot specific animal session performance, or just per animal?? 
+animal808T = animal808T.sort_values(by='date')
+sns.scatterplot(data = animal808T, x ='date',y='lick_trials', hue='stage')
+plt.title('808T')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal807T = animal807T.sort_values(by='date')
+sns.scatterplot(data = animal807T, x ='date',y='lick_trials', hue='stage')
+plt.title('807T')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal806N = animal806N.sort_values(by='date')
+sns.scatterplot(data = animal806N, x ='date',y='lick_trials', hue='stage')
+plt.title('806N')
+plt.xticks(rotation=45)
+
+#%% plot specific animal session performance, or just per animal?? 
+animal277N = animal277N.sort_values(by='date')
+sns.scatterplot(data = animal277N, x ='date',y='p_lick_trials', hue='stage')
+plt.title('277N')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal277T = animal277T.sort_values(by='date')
+sns.scatterplot(data = animal277T, x ='date',y='p_lick_trials', hue='stage')
+plt.title('277T')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal4432T = animal4432T.sort_values(by='date')
+sns.scatterplot(data = animal4432T, x ='date',y='p_lick_trials', hue='stage')
+plt.title('4432T')
+#%% plot specific animal session performance, or just per animal?? 
+animal4844T = animal4844T.sort_values(by='date')
+sns.scatterplot(data = animal4844T, x ='date',y='p_lick_trials', hue='stage')
+plt.title('4844T')
+#%% plot specific animal session performance, or just per animal?? 
+animal808T = animal808T.sort_values(by='date')
+sns.scatterplot(data = animal808T, x ='date',y='p_lick_trials', hue='stage')
+plt.title('808T')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal807T = animal807T.sort_values(by='date')
+sns.scatterplot(data = animal807T, x ='date',y='p_lick_trials', hue='stage')
+plt.title('807T')
+plt.xticks(rotation=45)
+#%% plot specific animal session performance, or just per animal?? 
+animal806N = animal806N.sort_values(by='date')
+sns.scatterplot(data = animal806N, x ='date',y='p_lick_trials', hue='stage')
+plt.title('806N')
+plt.xticks(rotation=45)
+#%% bar hold scatter plot, but need to sum sessions across days bc rn its a fucking mess
+bh_df = pd.read_csv('/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary/raw_behavior_summary.csv')
+bh_df['date'] = pd.to_datetime(bh_df['date'])
+bh_df = bh_df.sort_values(by='date')
+sns.scatterplot(data=bh_df, x='date',y='bar_holds',hue='stage')
 #%% DEPRICATED was from chatgpt
 def analyze_trials(df):
     # Ensure Timestamp is in datetime format
