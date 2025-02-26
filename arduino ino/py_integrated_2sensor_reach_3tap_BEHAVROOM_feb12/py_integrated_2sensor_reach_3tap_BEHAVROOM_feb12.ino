@@ -19,7 +19,7 @@ CapacitiveSensor capSensor_1 = CapacitiveSensor(SENSOR_SEND_1, SENSOR_RECEIVE_1)
 CapacitiveSensor capSensor_2 = CapacitiveSensor(SENSOR_SEND_2, SENSOR_RECEIVE_2);
 
 int prev_center_1 = 0;
-const int threshold_center_1 = 15;
+const int threshold_center_1 = 10;
 int prev_center_2 = 0;
 const int threshold_center_2 = 15;
 

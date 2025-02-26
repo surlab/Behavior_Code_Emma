@@ -17,5 +17,5 @@ now it looks jagged like triangle function during recording,
 but after its done it looks like a squarew wave! is this a function of prarie view?
 
 i succesfully tested 30 msec pulses from a different port2/line4 
-P2.4 PFI(BNC) on behav pc nidaq to AI4 on 2p3 nidaq. it reads spiky in real time, 
+P2.4 PFI(BNC) on behav pc nidaq to A I4 on 2p3 nidaq. it reads spiky in real time, 
 but turns into a proper square wave after imaging finishes. 

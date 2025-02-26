@@ -266,37 +266,6 @@ for filename in files:
         # Move the file to the appropriate date subdirectory
         shutil.move(os.path.join(source_dir, filename), os.path.join(date_dir, filename))
 
-#%% test code
-dirpath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T'
-filename = '808T_Lick_20240813_223132.txt'
-#do direcotry walk thing to filter through them
-filepath = os.path.join(dirpath,filename)
-df = pd.read_csv(filepath, sep='-', header=None, on_bad_lines='skip')
-df = df.reset_index()
-#alt labels = df.columns[-2:]
-df.drop(labels=['index',2,3],axis=1,inplace=True)
-df.rename(columns={0: 'Timestamp', 1: 'Print'}, inplace=True)
-df['Sensor'] = df['Print'].str.extract(r'(lick|bar)', expand=False)
-df['Value'] = df['Print'].str.extract(r'(\d+)', expand=False).astype(float)
-#df['Solenoid'] = df['Print'].str.contains('Solenoid Activated').astype(bool)
-df.drop(labels=['Print'],axis=1,inplace=True)
-#df = df[~(df['Sensor'].isna() & (df['Solenoid'] == 0))]
-#df.dropna(axis=0,inplace=True)
-df = df.sort_values(by='Timestamp')
-# Regular expression to extract animal_ID, stage, and timestamp
-pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8}_\d{6})")
-# Extracting the components from the filename
-match = pattern.match(filename)
-if match:
-    animal_ID = match.group(1)
-    stage = match.group(2)
-    timestamp = match.group(3)
-else:
-    raise ValueError("Filename format does not match the expected pattern.")
-
-df['Animal_ID'] = animal_ID
-df['Stage'] = stage
-df['File_Timestamp'] = timestamp
 #%% specific session plot
 filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277T/277T_LickReach_20240911_212833.txt'
 filename = os.path.basename(filepath)
@@ -317,7 +286,7 @@ smoothed_plot(df, animal_ID = animal_ID, date=date, stage=stage, kernel_size = 9
 '''despite agg. capability, this is not the best place to aggeregate the data
 should summarize after you have some performance criteria. 
 use this script for visualization of performance criteria as you develop them'''
-animal_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/277N'
+animal_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/4844T'
 #get list of behav files 
 txt_files = get_txt_path(animal_path)
 #parse to extract animal_ID, stage, and timestamp
@@ -443,59 +412,15 @@ print(f"Standard Deviation: {stdev_value}")
 print(f"Lick Detection Threshold: {threshold}")
 print(f"Number of Licks Detected: {num_licks}")
 
-#%% UPDATE FOR BEHAV BASED METRICS to get some summary values?
-#behav_df = pd.read_csv('/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary/behavior_summary.csv')
-# Group by 'AnimalID' and 'Region', then calculate unique slices per group
-summary = behav_df.groupby(['AnimalID', 'Origin', 'Region'])['Slice'].nunique().reset_index()
-
-# Rename the column for clarity
-unique_slices.rename(columns={'Slice': 'UniqueSlices'}, inplace=True)
-
-# Display the result
-print(unique_slices)
-
-mean_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].mean().reset_index()
-print(mean_unique_slices)
-
-std_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].std().reset_index()
-print(std_unique_slices)
-#%% test code. get trial based data, depricate when you graduate from the txt file acquisition (eyeroll)
-
-def trial_lick(row,df):
-    '''extract each set between trial_start and trial_end to see if lick_detected, try not to use for loop operation 
-    record binary value if lick detected
-        '''
-    mask = (df['Timestamp'] >= row['trial_start']) & (df['Timestamp']<= row['trial_end'])
-    return int(df.loc[mask,'Lick_Detected'].any())
-
-min_bar_hold = 1.5 #sec
-max_trial_dur = 10 #sec
-filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
-df = get_txt_df(filepath)
-trial_start = df[df['Solenoid']==True]['Timestamp'].reset_index(drop=True)
-trial_dur = trial_start.diff().shift(-1) #diff between previous and next timestamp
-trial_dur = trial_dur.dt.total_seconds().fillna(min_bar_hold) 
-#trial_end as next solenoid activation time OR 10 seconds after start of current trial (within row). choose lowest value 
-    #trial_end = min(trial_start+trial_dur,10)
-trial_end_est = trial_start + pd.to_timedelta(trial_dur, unit='s')
-trial_end_10sec = trial_start + pd.to_timedelta(max_trial_dur, unit='s')
-
-# For each trial, take the minimum of trial_end or trial_start + 10 seconds
-trial_end = pd.DataFrame({'trial_end': trial_end_est, 'trial_end_10sec': trial_end_10sec}).min(axis=1)
-#create trial_df 
-trial_df = pd.DataFrame({
-    'trial_start': trial_start,
-    'trial_end': trial_end
-    })
-#apply trial_lick function to get lick detection per trial (passes each row of trial_df to trial_lick_detect)
-trial_df['Lick_Detected'] = trial_df.apply(trial_lick, axis=1,df=df)
-#report trial start time, trial duration, if lick detected in trial in a new compressed df 
-print(trial_df)
 #%% * functions to get by trial and by session performance
+    #note, trials are being identified by when the solenoid open condition was activated, not by when the condition was met 
+    #ie the conditions are tested by arduino to enable solenoid open, and we are trusting this and just saying when arduino says bar was held long enough this is a trial. 
+    #but true trial start time would depend on when the mouse started to hold the bar, timing from last water droplet, etc. 
+
 def trial_lick_detect(row,df):
     '''
     row : row of pandas df
-        has trial start and trial end time
+    has trial start and trial end time
     df: this should be the df extracted from txt file with all sensor data. 
     filters parent df to individual trials using start and end times
     records if any lick was detected during that trial period
@@ -504,16 +429,22 @@ def trial_lick_detect(row,df):
     return int(df.loc[mask,'Lick_Detected'].any())
     
 def trial_performance(filepath, min_bar_hold = 1.5, max_trial_dur = 10):
-    #do trial processing in here ! lah lah lah
+    '''
+    trial start is reported as time conditions were met to open solenoid, but true trial start time would require
+    (a) knowing how long the mouse needs to hold the bar and (b) trial history. min_bar_hold should be identified from the txt file and used for this purpose.
+    in get_txt_df - solenoid activated is reported once per trial. so luckily this is an okay metric to use
+    the analysis of lick_detected/total_trials will tell us "of the succesful bar holds, how many were succesful reaches"
+    '''
     df = get_txt_df(filepath)
     trial_start = df[df['Solenoid']==True]['Timestamp'].reset_index(drop=True)
+    #get trial_dur by measuring time between solenoid activations. min btw duration and 10 sec will be selected.  
     trial_dur = trial_start.diff().shift(-1) #diff between previous and next timestamp
     trial_dur = trial_dur.dt.total_seconds().fillna(min_bar_hold) 
-    #determine trial end time esitmate and max
+    #determine trial end time estimate and max
     trial_end_est = trial_start + pd.to_timedelta(trial_dur, unit='s')
-    trial_end_10sec = trial_start + pd.to_timedelta(max_trial_dur, unit='s')
-    # For each trial, take the minimum of trial_end or trial_start + 10 seconds
-    trial_end = pd.DataFrame({'trial_end': trial_end_est, 'trial_end_10sec': trial_end_10sec}).min(axis=1)
+    trial_end_max = trial_start + pd.to_timedelta(max_trial_dur, unit='s')
+    # For each trial, take the minimum of trial_end or trial_start + max_trial_dur
+    trial_end = trial_end_est.combine(trial_end_max, min)
     #create trial_df 
     trial_df = pd.DataFrame({
         'trial_start': trial_start,
@@ -531,12 +462,19 @@ filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_d
 trial_perf = trial_performance(filepath, min_bar_hold, max_trial_dur)'''
 
 def sess_performance(filepath, min_bar_hold=1.5, max_trial_dur=10):
+    '''
+    the session start and session end time is incorrect here. it is chosen based off first solenoid activation
+    but the session could have lasted much longer than the trial_start_end min/max times. 
+    we need to just go into the txt file and get first and last timestamps (get_txt_df_)
+
+    '''
+    df = get_txt_df(filepath)
     trial_df = trial_performance(filepath, min_bar_hold, max_trial_dur)
     total_trials = len(trial_df)
     lick_trials = trial_df['Lick_Detected'].sum()
-    session_start = trial_df['trial_start'].min()
-    session_end = trial_df['trial_end'].max()
-    session_duration = (session_end - session_start).total_seconds() / 60  # duration in minutes
+    
+    dur = (df['Timestamp'].max() - df['Timestamp'].min())
+    session_duration = dur.total_seconds()/60
     
     filename = os.path.basename(filepath)
     match = re.match(r"(\d{3,4}[A-Z])_(.+?)_(\d{8})_(\d{6})", filename)
@@ -581,7 +519,7 @@ for txt in txt_files:
 #SAVE to csv 
 save_path = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary'
 output_csv_path = os.path.join(save_path, "behavior_summary.csv")
-behav_df.to_csv(output_csv_path, index=False)
+behav_summary.to_csv(output_csv_path, index=False)
 print(f"Saved measurements to {output_csv_path}")
 #%% DELETE OR MOVE ALL OF THIS SOMEWHERE ELSE PLEASE ITS LIKE TOO MESSY FOR THIS SCRIPT
 #%% if not rerunning summarize
@@ -589,27 +527,56 @@ print(f"Saved measurements to {output_csv_path}")
 behav_summary['p_lick_trials'] = 100*behav_summary['lick_trials']/behav_summary['total_trials']
 #%% sort behav summary by animal and plot 
 animal277N = behav_summary[behav_summary['animal_ID']=='277N']
-animal277N = animal277N[animal277N['session_duration_min']>10]
+animal277N = animal277N[animal277N['duration_min']>10]
 #plt.plot()
 animal277T = behav_summary[behav_summary['animal_ID']=='277T']
-animal277T = animal277T[animal277T['session_duration_min']>10]
+animal277T = animal277T[animal277T['duration_min']>10]
 #%%
 #behav_summary = behav_summary.replace('4932T','4432T')
 animal4432T = behav_summary[behav_summary['animal_ID']=='4432T']
-animal4432T = animal4432T[animal4432T['session_duration_min']>10]
+animal4432T = animal4432T[animal4432T['duration_min']>10]
 #%%
 behav_summary = behav_summary.replace('4944T','4844T')
 animal4844T = behav_summary[behav_summary['animal_ID']=='4844T']
-animal4844T = animal4844T[animal4844T['session_duration_min']>10]
+animal4844T = animal4844T[animal4844T['duration_min']>10]
 #%%
 animal808T = behav_summary[behav_summary['animal_ID']=='808T']
-animal808T = animal808T[animal808T['session_duration_min']>10]
+animal808T = animal808T[animal808T['duration_min']>10]
 #plt.plot()
 animal807T = behav_summary[behav_summary['animal_ID']=='807T']
-animal807T = animal807T[animal807T['session_duration_min']>10]
+animal807T = animal807T[animal807T['duration_min']>10]
 #%%
 animal806N = behav_summary[behav_summary['animal_ID']=='806N']
-animal806N = animal806N[animal806N['session_duration_min']>10]
+animal806N = animal806N[animal806N['duration_min']>10]
+#%% here
+animal770N = behav_summary[behav_summary['animal_ID']=='770N']
+animal770N = animal770N[animal770N['duration_min']>10]
+
+animal771N = behav_summary[behav_summary['animal_ID']=='771N']
+animal771N = animal771N[animal771N['duration_min']>10]
+
+animal772N = behav_summary[behav_summary['animal_ID']=='772N']
+animal772N = animal772N[animal772N['duration_min']>10]
+#%% here
+animal770N = animal770N.sort_values(by='date')
+sns.scatterplot(data = animal770N, x ='date',y='lick_trials', hue='stage')
+plt.title('770N')
+plt.xticks(rotation=45)
+
+plt.figure()
+
+animal771N = animal771N.sort_values(by='date')
+sns.scatterplot(data = animal771N, x ='date',y='lick_trials', hue='stage')
+plt.title('771N')
+plt.xticks(rotation=45)
+
+plt.figure()
+
+animal772N = animal772N.sort_values(by='date')
+sns.scatterplot(data = animal772N, x ='date',y='lick_trials', hue='stage')
+plt.title('772N')
+plt.xticks(rotation=45)
+
 #%% plot specific animal session performance, or just per animal?? 
 animal277N = animal277N.sort_values(by='date')
 sns.scatterplot(data = animal277N, x ='date',y='lick_trials', hue='stage')
@@ -658,6 +625,7 @@ plt.xticks(rotation=45)
 animal4432T = animal4432T.sort_values(by='date')
 sns.scatterplot(data = animal4432T, x ='date',y='p_lick_trials', hue='stage')
 plt.title('4432T')
+plt.xticks(rotation=45)
 #%% plot specific animal session performance, or just per animal?? 
 animal4844T = animal4844T.sort_values(by='date')
 sns.scatterplot(data = animal4844T, x ='date',y='p_lick_trials', hue='stage')
@@ -727,3 +695,85 @@ def analyze_trials(df):
     trials_with_lick = trial_df['Lick_Detected'].sum()
 
     return total_trials, trials_with_lick, trial_df
+
+#%% test code
+dirpath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T'
+filename = '808T_Lick_20240813_223132.txt'
+#do direcotry walk thing to filter through them
+filepath = os.path.join(dirpath,filename)
+df = pd.read_csv(filepath, sep='-', header=None, on_bad_lines='skip')
+df = df.reset_index()
+#alt labels = df.columns[-2:]
+df.drop(labels=['index',2,3],axis=1,inplace=True)
+df.rename(columns={0: 'Timestamp', 1: 'Print'}, inplace=True)
+df['Sensor'] = df['Print'].str.extract(r'(lick|bar)', expand=False)
+df['Value'] = df['Print'].str.extract(r'(\d+)', expand=False).astype(float)
+#df['Solenoid'] = df['Print'].str.contains('Solenoid Activated').astype(bool)
+df.drop(labels=['Print'],axis=1,inplace=True)
+#df = df[~(df['Sensor'].isna() & (df['Solenoid'] == 0))]
+#df.dropna(axis=0,inplace=True)
+df = df.sort_values(by='Timestamp')
+# Regular expression to extract animal_ID, stage, and timestamp
+pattern = re.compile(r"(\d{3,4}[A-Z])_(.+?)_(\d{8}_\d{6})")
+# Extracting the components from the filename
+match = pattern.match(filename)
+if match:
+    animal_ID = match.group(1)
+    stage = match.group(2)
+    timestamp = match.group(3)
+else:
+    raise ValueError("Filename format does not match the expected pattern.")
+
+df['Animal_ID'] = animal_ID
+df['Stage'] = stage
+df['File_Timestamp'] = timestamp
+
+#%% test code. get trial based data, depricate when you graduate from the txt file acquisition (eyeroll)
+
+def trial_lick(row,df):
+    '''extract each set between trial_start and trial_end to see if lick_detected, try not to use for loop operation 
+    record binary value if lick detected
+        '''
+    mask = (df['Timestamp'] >= row['trial_start']) & (df['Timestamp']<= row['trial_end'])
+    return int(df.loc[mask,'Lick_Detected'].any())
+
+min_bar_hold = 1.5 #sec
+max_trial_dur = 10 #sec
+filepath = '/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/lick_reaching_data/808T/808T_LickReach_20240909_170952.txt'
+df = get_txt_df(filepath)
+trial_start = df[df['Solenoid']==True]['Timestamp'].reset_index(drop=True)
+trial_dur = trial_start.diff().shift(-1) #diff between previous and next timestamp
+trial_dur = trial_dur.dt.total_seconds().fillna(min_bar_hold) 
+#trial_end as next solenoid activation time OR 10 seconds after start of current trial (within row). choose lowest value 
+    #trial_end = min(trial_start+trial_dur,10)
+trial_end_est = trial_start + pd.to_timedelta(trial_dur, unit='s')
+trial_end_10sec = trial_start + pd.to_timedelta(max_trial_dur, unit='s')
+
+# For each trial, take the minimum of trial_end or trial_start + 10 seconds
+trial_end = pd.DataFrame({'trial_end': trial_end_est, 'trial_end_10sec': trial_end_10sec}).min(axis=1)
+#create trial_df 
+trial_df = pd.DataFrame({
+    'trial_start': trial_start,
+    'trial_end': trial_end
+    })
+#apply trial_lick function to get lick detection per trial (passes each row of trial_df to trial_lick_detect)
+trial_df['Lick_Detected'] = trial_df.apply(trial_lick, axis=1,df=df)
+#report trial start time, trial duration, if lick detected in trial in a new compressed df 
+print(trial_df)
+
+#%% UPDATE FOR BEHAV BASED METRICS to get some summary values?
+#behav_df = pd.read_csv('/Users/emmaodom/Dropbox (MIT)/Emma/Reach_Task_Master/data_summary/behavior_summary.csv')
+# Group by 'AnimalID' and 'Region', then calculate unique slices per group
+summary = behav_df.groupby(['AnimalID', 'Origin', 'Region'])['Slice'].nunique().reset_index()
+
+# Rename the column for clarity
+unique_slices.rename(columns={'Slice': 'UniqueSlices'}, inplace=True)
+
+# Display the result
+print(unique_slices)
+
+mean_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].mean().reset_index()
+print(mean_unique_slices)
+
+std_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].std().reset_index()
+print(std_unique_slices)

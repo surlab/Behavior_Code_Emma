@@ -1,6 +1,7 @@
 const long BAUD = 115200;
-const int SOLENOID_PIN = 9; // Pin for solenoid
-const int SOLENOID_LED = 12; // Reporter LED for solenoid activation
+// Solenoid and LED pins
+const int SOLENOID_PIN = 5;
+const int SOLENOID_LED = 13;
 int set_sol_duration = 30; // Default duration for solenoid to stay open (in milliseconds)
 
 // For controlling solenoid
