@@ -777,3 +777,56 @@ print(mean_unique_slices)
 
 std_unique_slices = unique_slices.groupby(['Origin', 'Region'])['UniqueSlices'].std().reset_index()
 print(std_unique_slices)
+
+def plot_animal_group(behav_summary, animal_ids, reach_only=False, min_duration=10):
+    """
+    Plot performance metrics for a group of animals
+    
+    Parameters
+    ----------
+    behav_summary : pandas DataFrame
+        Summary dataframe containing behavioral metrics
+    animal_ids : list
+        List of animal IDs to plot
+    reach_only : bool, optional
+        If True, only plot sessions where stage contains 'reach' (case insensitive)
+    min_duration : int, optional
+        Minimum session duration in minutes to include
+    """
+    for animal_id in animal_ids:
+        # Filter data for specific animal and minimum duration
+        animal_data = behav_summary[behav_summary['animal_ID'] == animal_id]
+        animal_data = animal_data[animal_data['duration_min'] > min_duration]
+        
+        # Filter for reach sessions if specified
+        if reach_only:
+            animal_data = animal_data[animal_data['stage'].str.contains('reach', case=False)]
+        
+        # Skip if no data after filtering
+        if len(animal_data) == 0:
+            print(f"No data for animal {animal_id} with current filters")
+            continue
+            
+        animal_data = animal_data.sort_values(by='date')
+        
+        # Create plots
+        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
+        
+        # Plot number of lick trials
+        sns.scatterplot(data=animal_data, x='date', y='lick_trials', 
+                       hue='stage', ax=ax1)
+        ax1.set_title(f'{animal_id} - Number of Successful Trials')
+        ax1.tick_params(axis='x', rotation=45)
+        
+        # Plot percentage of successful trials
+        sns.scatterplot(data=animal_data, x='date', y='p_lick_trials', 
+                       hue='stage', ax=ax2)
+        ax2.set_title(f'{animal_id} - Success Rate (%)')
+        ax2.tick_params(axis='x', rotation=45)
+        
+        plt.tight_layout()
+        plt.show()
+
+# Example usage:
+# animal_ids = ['277N', '277T', '808T']
+# plot_animal_group(behav_summary, animal_ids, reach_only=True)
