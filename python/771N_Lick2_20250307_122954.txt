@@ -1,0 +1,1979 @@
+2025-03-07 12:29:56.077 - Sent start command to Arduino.
+12:29:56.082 - Arduino: Arduino doing things, Arduino started
+12:29:56.086 - Arduino: touch duration: 1500ms
+12:29:56.086 - Arduino: solenoid open for 40ms
+12:29:56.087 - Arduino: bar: 0
+12:29:56.090 - Arduino: lick: 0
+12:29:56.090 - Arduino: Solenoid pin state: 0
+12:29:56.094 - Arduino: bar: 1
+12:29:56.094 - Arduino: lick: 9
+12:29:56.098 - Arduino: Solenoid pin state: 0
+12:29:56.098 - Arduino: bar: 3
+12:29:56.102 - Arduino: lick: 9
+12:29:56.102 - Arduino: Solenoid pin state: 0
+12:29:56.106 - Arduino: bar: 3
+12:29:56.106 - Arduino: lick: 8
+12:29:56.110 - Arduino: Solenoid pin state: 0
+12:29:56.114 - Arduino: bar: 4
+12:29:56.114 - Arduino: lick: 9
+12:29:56.114 - Arduino: Solenoid pin state: 0
+12:29:56.118 - Arduino: bar: 3
+12:29:56.118 - Arduino: lick: 9
+12:29:56.123 - Arduino: Solenoid pin state: 0
+12:29:56.127 - Arduino: bar: 3
+12:29:56.127 - Arduino: lick: 9
+12:29:56.131 - Arduino: Solenoid pin state: 0
+12:29:56.131 - Arduino: bar: 3
+12:29:56.135 - Arduino: lick: 9
+12:29:56.135 - Arduino: Solenoid pin state: 0
+12:29:56.139 - Arduino: bar: 2
+12:29:56.140 - Arduino: lick: 9
+12:29:56.143 - Arduino: Solenoid pin state: 0
+12:29:56.147 - Arduino: bar: 2
+12:29:56.147 - Arduino: lick: 9
+12:29:56.147 - Arduino: Solenoid pin state: 0
+12:29:56.151 - Arduino: bar: 2
+12:29:56.151 - Arduino: lick: 9
+12:29:56.155 - Arduino: Solenoid pin state: 0
+12:29:56.160 - Arduino: bar: 3
+12:29:56.160 - Arduino: lick: 9
+12:29:56.164 - Arduino: Solenoid pin state: 0
+12:29:56.164 - Arduino: bar: 3
+12:29:56.167 - Arduino: lick: 8
+12:29:56.168 - Arduino: Solenoid pin state: 0
+12:29:56.171 - Arduino: bar: 2
+12:29:56.172 - Arduino: lick: 8
+12:29:56.175 - Arduino: Solenoid pin state: 0
+12:29:56.180 - Arduino: bar: 4
+12:29:56.180 - Arduino: lick: 9
+12:29:56.180 - Arduino: Solenoid pin state: 0
+12:29:56.184 - Arduino: bar: 3
+12:29:56.184 - Arduino: lick: 9
+12:29:56.188 - Arduino: Solenoid pin state: 0
+12:29:56.192 - Arduino: bar: 3
+12:29:56.192 - Arduino: lick: 9
+12:29:56.196 - Arduino: Solenoid pin state: 0
+12:29:56.196 - Arduino: bar: 3
+12:29:56.201 - Arduino: lick: 9
+12:29:56.201 - Arduino: Solenoid pin state: 0
+12:29:56.205 - Arduino: bar: 3
+12:29:56.205 - Arduino: lick: 8
+12:29:56.208 - Arduino: Solenoid pin state: 0
+12:29:56.213 - Arduino: bar: 3
+12:29:56.213 - Arduino: lick: 9
+12:29:56.214 - Arduino: Solenoid pin state: 0
+12:29:56.217 - Arduino: bar: 3
+12:29:56.217 - Arduino: lick: 9
+12:29:56.221 - Arduino: Solenoid pin state: 0
+12:29:56.225 - Arduino: bar: 2
+12:29:56.225 - Arduino: lick: 9
+12:29:56.225 - Arduino: Solenoid pin state: 0
+12:29:56.229 - Arduino: bar: 3
+12:29:56.234 - Arduino: lick: 9
+12:29:56.234 - Arduino: Solenoid pin state: 0
+12:29:56.237 - Arduino: bar: 4
+12:29:56.237 - Arduino: lick: 8
+12:29:56.241 - Arduino: Solenoid pin state: 0
+12:29:56.246 - Arduino: bar: 3
+12:29:56.246 - Arduino: lick: 9
+12:29:56.246 - Arduino: Solenoid pin state: 0
+12:29:56.249 - Arduino: bar: 3
+12:29:56.249 - Arduino: lick: 8
+12:29:56.253 - Arduino: Solenoid pin state: 0
+12:29:56.258 - Arduino: bar: 3
+12:29:56.258 - Arduino: lick: 8
+12:29:56.258 - Arduino: Solenoid pin state: 0
+12:29:56.262 - Arduino: bar: 3
+12:29:56.266 - Arduino: lick: 9
+12:29:56.266 - Arduino: Solenoid pin state: 0
+12:29:56.270 - Arduino: bar: 3
+12:29:56.270 - Arduino: lick: 9
+12:29:56.274 - Arduino: Solenoid pin state: 0
+12:29:56.278 - Arduino: bar: 3
+12:29:56.278 - Arduino: lick: 8
+12:29:56.279 - Arduino: Solenoid pin state: 0
+12:29:56.282 - Arduino: bar: 3
+12:29:56.282 - Arduino: lick: 9
+12:29:56.286 - Arduino: Solenoid pin state: 0
+12:29:56.291 - Arduino: bar: 3
+12:29:56.291 - Arduino: lick: 8
+12:29:56.291 - Arduino: Solenoid pin state: 0
+12:29:56.295 - Arduino: bar: 4
+12:29:56.299 - Arduino: lick: 9
+12:29:56.299 - Arduino: Solenoid pin state: 0
+12:29:56.303 - Arduino: bar: 4
+12:29:56.303 - Arduino: lick: 9
+12:29:56.307 - Arduino: Solenoid pin state: 0
+12:29:56.311 - Arduino: bar: 3
+12:29:56.311 - Arduino: lick: 9
+12:29:56.312 - Arduino: Solenoid pin state: 0
+12:29:56.315 - Arduino: bar: 3
+12:29:56.315 - Arduino: lick: 8
+12:29:56.319 - Arduino: Solenoid pin state: 0
+12:29:56.323 - Arduino: bar: 3
+12:29:56.323 - Arduino: lick: 8
+12:29:56.323 - Arduino: Solenoid pin state: 0
+12:29:56.327 - Arduino: bar: 3
+12:29:56.332 - Arduino: lick: 9
+12:29:56.332 - Arduino: Solenoid pin state: 0
+12:29:56.336 - Arduino: bar: 3
+12:29:56.336 - Arduino: lick: 8
+12:29:56.339 - Arduino: Solenoid pin state: 0
+12:29:56.344 - Arduino: bar: 3
+12:29:56.344 - Arduino: lick: 8
+12:29:56.344 - Arduino: Solenoid pin state: 0
+12:29:56.348 - Arduino: bar: 4
+12:29:56.348 - Arduino: lick: 9
+12:29:56.352 - Arduino: Solenoid pin state: 0
+12:29:56.355 - Arduino: bar: 3
+12:29:56.355 - Arduino: lick: 9
+12:29:56.357 - Arduino: Solenoid pin state: 0
+12:29:56.360 - Arduino: bar: 3
+12:29:56.364 - Arduino: lick: 8
+12:29:56.364 - Arduino: Solenoid pin state: 0
+12:29:56.368 - Arduino: bar: 4
+12:29:56.368 - Arduino: lick: 9
+12:29:56.372 - Arduino: Solenoid pin state: 0
+12:29:56.376 - Arduino: bar: 3
+12:29:56.376 - Arduino: lick: 9
+12:29:56.376 - Arduino: Solenoid pin state: 0
+12:29:56.381 - Arduino: bar: 3
+12:29:56.381 - Arduino: lick: 8
+12:29:56.385 - Arduino: Solenoid pin state: 0
+12:29:56.389 - Arduino: bar: 3
+12:29:56.389 - Arduino: lick: 9
+12:29:56.389 - Arduino: Solenoid pin state: 0
+12:29:56.393 - Arduino: bar: 3
+12:29:56.397 - Arduino: lick: 8
+12:29:56.397 - Arduino: Solenoid pin state: 0
+12:29:56.401 - Arduino: bar: 3
+12:29:56.401 - Arduino: lick: 8
+12:29:56.405 - Arduino: Solenoid pin state: 0
+12:29:56.409 - Arduino: bar: 2
+12:29:56.409 - Arduino: lick: 9
+12:29:56.409 - Arduino: Solenoid pin state: 0
+12:29:56.413 - Arduino: bar: 3
+12:29:56.413 - Arduino: lick: 9
+12:29:56.417 - Arduino: Solenoid pin state: 0
+12:29:56.421 - Arduino: bar: 4
+12:29:56.421 - Arduino: lick: 8
+12:29:56.421 - Arduino: Solenoid pin state: 0
+12:29:56.425 - Arduino: bar: 3
+12:29:56.430 - Arduino: lick: 9
+12:29:56.430 - Arduino: Solenoid pin state: 0
+12:29:56.434 - Arduino: bar: 4
+12:29:56.434 - Arduino: lick: 9
+12:29:56.438 - Arduino: Solenoid pin state: 0
+12:29:56.442 - Arduino: bar: 3
+12:29:56.442 - Arduino: lick: 9
+12:29:56.442 - Arduino: Solenoid pin state: 0
+12:29:56.446 - Arduino: bar: 3
+12:29:56.446 - Arduino: lick: 9
+12:29:56.450 - Arduino: Solenoid pin state: 0
+12:29:56.454 - Arduino: bar: 3
+12:29:56.454 - Arduino: lick: 8
+12:29:56.455 - Arduino: Solenoid pin state: 0
+12:29:56.458 - Arduino: bar: 3
+12:29:56.458 - Arduino: lick: 9
+12:29:56.463 - Arduino: Solenoid pin state: 0
+12:29:56.467 - Arduino: bar: 3
+12:29:56.467 - Arduino: lick: 9
+12:29:56.471 - Arduino: Solenoid pin state: 0
+12:29:56.471 - Arduino: bar: 2
+12:29:56.475 - Arduino: lick: 8
+12:29:56.475 - Arduino: Solenoid pin state: 0
+12:29:56.479 - Arduino: bar: 3
+12:29:56.479 - Arduino: lick: 9
+12:29:56.483 - Arduino: Solenoid pin state: 0
+12:29:56.487 - Arduino: bar: 3
+12:29:56.487 - Arduino: lick: 9
+12:29:56.487 - Arduino: Solenoid pin state: 0
+12:29:56.492 - Arduino: bar: 3
+12:29:56.492 - Arduino: lick: 9
+12:29:56.496 - Arduino: Solenoid pin state: 0
+12:29:56.499 - Arduino: bar: 3
+12:29:56.499 - Arduino: lick: 8
+12:29:56.504 - Arduino: Solenoid pin state: 0
+12:29:56.504 - Arduino: bar: 3
+12:29:56.508 - Arduino: lick: 9
+12:29:56.508 - Arduino: Solenoid pin state: 0
+12:29:56.512 - Arduino: bar: 3
+12:29:56.512 - Arduino: lick: 9
+12:29:56.516 - Arduino: Solenoid pin state: 0
+12:29:56.520 - Arduino: bar: 4
+12:29:56.520 - Arduino: lick: 9
+12:29:56.520 - Arduino: Solenoid pin state: 0
+12:29:56.524 - Arduino: bar: 3
+12:29:56.524 - Arduino: lick: 9
+12:29:56.529 - Arduino: Solenoid pin state: 0
+12:29:56.533 - Arduino: bar: 3
+12:29:56.533 - Arduino: lick: 8
+12:29:56.537 - Arduino: Solenoid pin state: 0
+12:29:56.537 - Arduino: bar: 4
+12:29:56.540 - Arduino: lick: 8
+12:29:56.540 - Arduino: Solenoid pin state: 0
+12:29:56.544 - Arduino: bar: 3
+12:29:56.544 - Arduino: lick: 9
+12:29:56.548 - Arduino: Solenoid pin state: 0
+12:29:56.553 - Arduino: bar: 4
+12:29:56.553 - Arduino: lick: 9
+12:29:56.553 - Arduino: Solenoid pin state: 0
+12:29:56.557 - Arduino: bar: 3
+12:29:56.557 - Arduino: lick: 9
+12:29:56.561 - Arduino: Solenoid pin state: 0
+12:29:56.565 - Arduino: bar: 2
+12:29:56.565 - Arduino: lick: 9
+12:29:56.568 - Arduino: Solenoid pin state: 0
+12:29:56.568 - Arduino: bar: 4
+12:29:56.574 - Arduino: lick: 9
+12:29:56.574 - Arduino: Solenoid pin state: 0
+12:29:56.577 - Arduino: bar: 3
+12:29:56.577 - Arduino: lick: 8
+12:29:56.581 - Arduino: Solenoid pin state: 0
+12:29:56.586 - Arduino: bar: 3
+12:29:56.586 - Arduino: lick: 9
+12:29:56.586 - Arduino: Solenoid pin state: 0
+12:29:56.589 - Arduino: bar: 3
+12:29:56.589 - Arduino: lick: 9
+12:29:56.594 - Arduino: Solenoid pin state: 0
+12:29:56.598 - Arduino: bar: 2
+12:29:56.598 - Arduino: lick: 9
+12:29:56.602 - Arduino: Solenoid pin state: 0
+12:29:56.602 - Arduino: bar: 4
+12:29:56.606 - Arduino: lick: 8
+12:29:56.606 - Arduino: Solenoid pin state: 0
+12:29:56.610 - Arduino: bar: 2
+12:29:56.610 - Arduino: lick: 9
+12:29:56.614 - Arduino: Solenoid pin state: 0
+12:29:56.618 - Arduino: bar: 3
+12:29:56.618 - Arduino: lick: 9
+12:29:56.618 - Arduino: Solenoid pin state: 0
+12:29:56.622 - Arduino: bar: 4
+12:29:56.622 - Arduino: lick: 9
+12:29:56.626 - Arduino: Solenoid pin state: 0
+12:29:56.631 - Arduino: bar: 3
+12:29:56.631 - Arduino: lick: 9
+12:29:56.635 - Arduino: Solenoid pin state: 0
+12:29:56.635 - Arduino: bar: 4
+12:29:56.638 - Arduino: lick: 9
+12:29:56.638 - Arduino: Solenoid pin state: 0
+12:29:56.642 - Arduino: bar: 3
+12:29:56.642 - Arduino: lick: 8
+12:29:56.646 - Arduino: Solenoid pin state: 0
+12:29:56.651 - Arduino: bar: 3
+12:29:56.651 - Arduino: lick: 8
+12:29:56.651 - Arduino: Solenoid pin state: 0
+12:29:56.655 - Arduino: bar: 3
+12:29:56.655 - Arduino: lick: 8
+12:29:56.660 - Arduino: Solenoid pin state: 0
+12:29:56.664 - Arduino: bar: 3
+12:29:56.664 - Arduino: lick: 9
+12:29:56.664 - Arduino: Solenoid pin state: 0
+12:29:56.667 - Arduino: bar: 4
+12:29:56.672 - Arduino: lick: 9
+12:29:56.672 - Arduino: Solenoid pin state: 0
+12:29:56.676 - Arduino: bar: 3
+12:29:56.676 - Arduino: lick: 9
+12:29:56.679 - Arduino: Solenoid pin state: 0
+12:29:56.684 - Arduino: bar: 3
+12:29:56.684 - Arduino: lick: 8
+12:29:56.684 - Arduino: Solenoid pin state: 0
+12:29:56.688 - Arduino: bar: 4
+12:29:56.688 - Arduino: lick: 9
+12:29:56.692 - Arduino: Solenoid pin state: 0
+12:29:56.696 - Arduino: bar: 3
+12:29:56.696 - Arduino: lick: 8
+12:29:56.696 - Arduino: Solenoid pin state: 0
+12:29:56.700 - Arduino: bar: 4
+12:29:56.704 - Arduino: lick: 9
+12:29:56.704 - Arduino: Solenoid pin state: 0
+12:29:56.709 - Arduino: bar: 2
+12:29:56.709 - Arduino: lick: 8
+12:29:56.713 - Arduino: Solenoid pin state: 0
+12:29:56.717 - Arduino: bar: 3
+12:29:56.717 - Arduino: lick: 8
+12:29:56.717 - Arduino: Solenoid pin state: 0
+12:29:56.720 - Arduino: bar: 3
+12:29:56.721 - Arduino: lick: 9
+12:29:56.725 - Arduino: Solenoid pin state: 0
+12:29:56.729 - Arduino: bar: 3
+12:29:56.729 - Arduino: lick: 8
+12:29:56.730 - Arduino: Solenoid pin state: 0
+12:29:56.733 - Arduino: bar: 3
+12:29:56.737 - Arduino: lick: 9
+12:29:56.737 - Arduino: Solenoid pin state: 0
+12:29:56.741 - Arduino: bar: 3
+12:29:56.741 - Arduino: lick: 8
+12:29:56.745 - Arduino: Solenoid pin state: 0
+12:29:56.749 - Arduino: bar: 3
+12:29:56.749 - Arduino: lick: 9
+12:29:56.749 - Arduino: Solenoid pin state: 0
+12:29:56.753 - Arduino: bar: 4
+12:29:56.753 - Arduino: lick: 9
+12:29:56.757 - Arduino: Solenoid pin state: 0
+12:29:56.762 - Arduino: bar: 3
+12:29:56.762 - Arduino: lick: 9
+12:29:56.762 - Arduino: Solenoid pin state: 0
+12:29:56.766 - Arduino: bar: 4
+12:29:56.770 - Arduino: lick: 9
+12:29:56.770 - Arduino: Solenoid pin state: 0
+12:29:56.774 - Arduino: bar: 3
+12:29:56.774 - Arduino: lick: 9
+12:29:56.778 - Arduino: Solenoid pin state: 0
+12:29:56.782 - Arduino: bar: 3
+12:29:56.783 - Arduino: lick: 8
+12:29:56.783 - Arduino: Solenoid pin state: 0
+12:29:56.786 - Arduino: bar: 3
+12:29:56.786 - Arduino: lick: 9
+12:29:56.790 - Arduino: Solenoid pin state: 0
+12:29:56.794 - Arduino: bar: 2
+12:29:56.794 - Arduino: lick: 9
+12:29:56.794 - Arduino: Solenoid pin state: 0
+12:29:56.799 - Arduino: bar: 3
+12:29:56.802 - Arduino: lick: 8
+12:29:56.802 - Arduino: Solenoid pin state: 0
+12:29:56.806 - Arduino: bar: 4
+12:29:56.806 - Arduino: lick: 8
+12:29:56.810 - Arduino: Solenoid pin state: 0
+12:29:56.814 - Arduino: bar: 3
+12:29:56.815 - Arduino: lick: 9
+12:29:56.815 - Arduino: Solenoid pin state: 0
+12:29:56.818 - Arduino: bar: 3
+12:29:56.820 - Arduino: lick: 8
+12:29:56.824 - Arduino: Solenoid pin state: 0
+12:29:56.827 - Arduino: bar: 3
+12:29:56.827 - Arduino: lick: 8
+12:29:56.827 - Arduino: Solenoid pin state: 0
+12:29:56.831 - Arduino: bar: 2
+12:29:56.835 - Arduino: lick: 8
+12:29:56.836 - Arduino: Solenoid pin state: 0
+12:29:56.839 - Arduino: bar: 4
+12:29:56.839 - Arduino: lick: 9
+12:29:56.843 - Arduino: Solenoid pin state: 0
+12:29:56.848 - Arduino: bar: 3
+12:29:56.848 - Arduino: lick: 9
+12:29:56.848 - Arduino: Solenoid pin state: 0
+12:29:56.851 - Arduino: bar: 3
+12:29:56.851 - Arduino: lick: 9
+12:29:56.856 - Arduino: Solenoid pin state: 0
+12:29:56.860 - Arduino: bar: 4
+12:29:56.860 - Arduino: lick: 9
+12:29:56.860 - Arduino: Solenoid pin state: 0
+12:29:56.864 - Arduino: bar: 3
+12:29:56.868 - Arduino: lick: 8
+12:29:56.868 - Arduino: Solenoid pin state: 0
+12:29:56.872 - Arduino: bar: 3
+12:29:56.872 - Arduino: lick: 9
+12:29:56.876 - Arduino: Solenoid pin state: 0
+12:29:56.881 - Arduino: bar: 3
+12:29:56.881 - Arduino: lick: 9
+12:29:56.881 - Arduino: Solenoid pin state: 0
+12:29:56.885 - Arduino: bar: 3
+12:29:56.885 - Arduino: lick: 8
+12:29:56.888 - Arduino: Solenoid pin state: 0
+12:29:56.892 - Arduino: bar: 3
+12:29:56.892 - Arduino: lick: 8
+12:29:56.893 - Arduino: Solenoid pin state: 0
+12:29:56.896 - Arduino: bar: 2
+12:29:56.900 - Arduino: lick: 8
+12:29:56.901 - Arduino: Solenoid pin state: 0
+12:29:56.905 - Arduino: bar: 3
+12:29:56.905 - Arduino: lick: 8
+12:29:56.909 - Arduino: Solenoid pin state: 0
+12:29:56.913 - Arduino: bar: 3
+12:29:56.914 - Arduino: lick: 9
+12:29:56.914 - Arduino: Solenoid pin state: 0
+12:29:56.917 - Arduino: bar: 3
+12:29:56.917 - Arduino: lick: 8
+12:29:56.921 - Arduino: Solenoid pin state: 0
+12:29:56.926 - Arduino: bar: 3
+12:29:56.926 - Arduino: lick: 8
+12:29:56.926 - Arduino: Solenoid pin state: 0
+12:29:56.929 - Arduino: bar: 3
+12:29:56.929 - Arduino: lick: 8
+12:29:56.934 - Arduino: Solenoid pin state: 0
+12:29:56.937 - Arduino: bar: 3
+12:29:56.938 - Arduino: lick: 8
+12:29:56.941 - Arduino: Solenoid pin state: 0
+12:29:56.941 - Arduino: bar: 3
+12:29:56.946 - Arduino: lick: 9
+12:29:56.946 - Arduino: Solenoid pin state: 0
+12:29:56.950 - Arduino: bar: 3
+12:29:56.950 - Arduino: lick: 9
+12:29:56.954 - Arduino: Solenoid pin state: 0
+12:29:56.959 - Arduino: bar: 3
+12:29:56.959 - Arduino: lick: 8
+12:29:56.959 - Arduino: Solenoid pin state: 0
+12:29:56.962 - Arduino: bar: 2
+12:29:56.962 - Arduino: lick: 10
+12:29:56.966 - Arduino: Solenoid pin state: 0
+12:29:56.970 - Arduino: bar: 4
+12:29:56.970 - Arduino: lick: 9
+12:29:56.974 - Arduino: Solenoid pin state: 0
+12:29:56.978 - Arduino: bar: 4
+12:29:56.978 - Arduino: lick: 9
+12:29:56.978 - Arduino: Solenoid pin state: 0
+12:29:56.983 - Arduino: bar: 3
+12:29:56.983 - Arduino: lick: 8
+12:29:56.987 - Arduino: Solenoid pin state: 0
+12:29:56.991 - Arduino: bar: 4
+12:29:56.991 - Arduino: lick: 8
+12:29:56.991 - Arduino: Solenoid pin state: 0
+12:29:56.995 - Arduino: bar: 3
+12:29:56.995 - Arduino: lick: 9
+12:29:57.000 - Arduino: Solenoid pin state: 0
+12:29:57.003 - Arduino: bar: 3
+12:29:57.003 - Arduino: lick: 8
+12:29:57.007 - Arduino: Solenoid pin state: 0
+12:29:57.007 - Arduino: bar: 3
+12:29:57.012 - Arduino: lick: 9
+12:29:57.012 - Arduino: Solenoid pin state: 0
+12:29:57.016 - Arduino: bar: 3
+12:29:57.016 - Arduino: lick: 8
+12:29:57.019 - Arduino: Solenoid pin state: 0
+12:29:57.024 - Arduino: bar: 3
+12:29:57.024 - Arduino: lick: 8
+12:29:57.024 - Arduino: Solenoid pin state: 0
+12:29:57.028 - Arduino: bar: 4
+12:29:57.028 - Arduino: lick: 9
+12:29:57.032 - Arduino: Solenoid pin state: 0
+12:29:57.036 - Arduino: bar: 3
+12:29:57.036 - Arduino: lick: 9
+12:29:57.040 - Arduino: Solenoid pin state: 0
+12:29:57.041 - Arduino: bar: 4
+12:29:57.045 - Arduino: lick: 8
+12:29:57.045 - Arduino: Solenoid pin state: 0
+12:29:57.048 - Arduino: bar: 3
+12:29:57.048 - Arduino: lick: 9
+12:29:57.052 - Arduino: Solenoid pin state: 0
+12:29:57.056 - Arduino: bar: 3
+12:29:57.057 - Arduino: lick: 8
+12:29:57.057 - Arduino: Solenoid pin state: 0
+12:29:57.061 - Arduino: bar: 4
+12:29:57.061 - Arduino: lick: 8
+12:29:57.065 - Arduino: Solenoid pin state: 0
+12:29:57.069 - Arduino: bar: 3
+12:29:57.069 - Arduino: lick: 8
+12:29:57.073 - Arduino: Solenoid pin state: 0
+12:29:57.073 - Arduino: bar: 3
+12:29:57.077 - Arduino: lick: 8
+12:29:57.077 - Arduino: Solenoid pin state: 0
+12:29:57.081 - Arduino: bar: 3
+12:29:57.081 - Arduino: lick: 9
+12:29:57.085 - Arduino: Solenoid pin state: 0
+12:29:57.090 - Arduino: bar: 3
+12:29:57.090 - Arduino: lick: 8
+12:29:57.090 - Arduino: Solenoid pin state: 0
+12:29:57.094 - Arduino: bar: 4
+12:29:57.094 - Arduino: lick: 9
+12:29:57.097 - Arduino: Solenoid pin state: 0
+12:29:57.102 - Arduino: bar: 3
+12:29:57.102 - Arduino: lick: 10
+12:29:57.106 - Arduino: Solenoid pin state: 0
+12:29:57.106 - Arduino: bar: 3
+12:29:57.109 - Arduino: lick: 9
+12:29:57.110 - Arduino: Solenoid pin state: 0
+12:29:57.114 - Arduino: bar: 3
+12:29:57.114 - Arduino: lick: 9
+12:29:57.118 - Arduino: Solenoid pin state: 0
+12:29:57.123 - Arduino: bar: 3
+12:29:57.123 - Arduino: lick: 8
+12:29:57.123 - Arduino: Solenoid pin state: 0
+12:29:57.127 - Arduino: bar: 3
+12:29:57.127 - Arduino: lick: 9
+12:29:57.130 - Arduino: Solenoid pin state: 0
+12:29:57.134 - Arduino: bar: 3
+12:29:57.134 - Arduino: lick: 9
+12:29:57.139 - Arduino: Solenoid pin state: 0
+12:29:57.139 - Arduino: bar: 3
+12:29:57.143 - Arduino: lick: 8
+12:29:57.143 - Arduino: Solenoid pin state: 0
+12:29:57.147 - Arduino: bar: 3
+12:29:57.147 - Arduino: lick: 9
+12:29:57.151 - Arduino: Solenoid pin state: 0
+12:29:57.155 - Arduino: bar: 3
+12:29:57.155 - Arduino: lick: 8
+12:29:57.155 - Arduino: Solenoid pin state: 0
+12:29:57.159 - Arduino: bar: 4
+12:29:57.159 - Arduino: lick: 9
+12:29:57.164 - Arduino: Solenoid pin state: 0
+12:29:57.167 - Arduino: bar: 3
+12:29:57.167 - Arduino: lick: 9
+12:29:57.168 - Arduino: Solenoid pin state: 0
+12:29:57.171 - Arduino: bar: 3
+12:29:57.175 - Arduino: lick: 8
+12:29:57.175 - Arduino: Solenoid pin state: 0
+12:29:57.179 - Arduino: bar: 3
+12:29:57.179 - Arduino: lick: 10
+12:29:57.183 - Arduino: Solenoid pin state: 0
+12:29:57.187 - Arduino: bar: 3
+12:29:57.187 - Arduino: lick: 8
+12:29:57.188 - Arduino: Solenoid pin state: 0
+12:29:57.192 - Arduino: bar: 3
+12:29:57.192 - Arduino: lick: 8
+12:29:57.196 - Arduino: Solenoid pin state: 0
+12:29:57.200 - Arduino: bar: 3
+12:29:57.200 - Arduino: lick: 9
+12:29:57.200 - Arduino: Solenoid pin state: 0
+12:29:57.204 - Arduino: bar: 3
+12:29:57.208 - Arduino: lick: 8
+12:29:57.208 - Arduino: Solenoid pin state: 0
+12:29:57.212 - Arduino: bar: 4
+12:29:57.212 - Arduino: lick: 9
+12:29:57.216 - Arduino: Solenoid pin state: 0
+12:29:57.221 - Arduino: bar: 3
+12:29:57.221 - Arduino: lick: 9
+12:29:57.221 - Arduino: Solenoid pin state: 0
+12:29:57.225 - Arduino: bar: 3
+12:29:57.225 - Arduino: lick: 9
+12:29:57.228 - Arduino: Solenoid pin state: 0
+12:29:57.232 - Arduino: bar: 3
+12:29:57.232 - Arduino: lick: 9
+12:29:57.233 - Arduino: Solenoid pin state: 0
+12:29:57.236 - Arduino: bar: 3
+12:29:57.241 - Arduino: lick: 9
+12:29:57.241 - Arduino: Solenoid pin state: 0
+12:29:57.245 - Arduino: bar: 3
+12:29:57.245 - Arduino: lick: 8
+12:29:57.249 - Arduino: Solenoid pin state: 0
+12:29:57.253 - Arduino: bar: 2
+12:29:57.253 - Arduino: lick: 9
+12:29:57.253 - Arduino: Solenoid pin state: 0
+12:29:57.257 - Arduino: bar: 4
+12:29:57.257 - Arduino: lick: 9
+12:29:57.262 - Arduino: Solenoid pin state: 0
+12:29:57.266 - Arduino: bar: 2
+12:29:57.266 - Arduino: lick: 9
+12:29:57.266 - Arduino: Solenoid pin state: 0
+12:29:57.269 - Arduino: bar: 3
+12:29:57.273 - Arduino: lick: 8
+12:29:57.274 - Arduino: Solenoid pin state: 0
+12:29:57.278 - Arduino: bar: 3
+12:29:57.278 - Arduino: lick: 8
+12:29:57.282 - Arduino: Solenoid pin state: 0
+12:29:57.286 - Arduino: bar: 3
+12:29:57.286 - Arduino: lick: 9
+12:29:57.287 - Arduino: Solenoid pin state: 0
+12:29:57.290 - Arduino: bar: 3
+12:29:57.290 - Arduino: lick: 9
+12:29:57.294 - Arduino: Solenoid pin state: 0
+12:29:57.298 - Arduino: bar: 4
+12:29:57.298 - Arduino: lick: 8
+12:29:57.298 - Arduino: Solenoid pin state: 0
+12:29:57.302 - Arduino: bar: 3
+12:29:57.306 - Arduino: lick: 8
+12:29:57.307 - Arduino: Solenoid pin state: 0
+12:29:57.311 - Arduino: bar: 3
+12:29:57.311 - Arduino: lick: 9
+12:29:57.314 - Arduino: Solenoid pin state: 0
+12:29:57.318 - Arduino: bar: 3
+12:29:57.318 - Arduino: lick: 9
+12:29:57.319 - Arduino: Solenoid pin state: 0
+12:29:57.322 - Arduino: bar: 2
+12:29:57.322 - Arduino: lick: 9
+12:29:57.326 - Arduino: Solenoid pin state: 0
+12:29:57.331 - Arduino: bar: 3
+12:29:57.331 - Arduino: lick: 9
+12:29:57.331 - Arduino: Solenoid pin state: 0
+12:29:57.335 - Arduino: bar: 3
+12:29:57.339 - Arduino: lick: 9
+12:29:57.339 - Arduino: Solenoid pin state: 0
+12:29:57.344 - Arduino: bar: 3
+12:29:57.344 - Arduino: lick: 8
+12:29:57.347 - Arduino: Solenoid pin state: 0
+12:29:57.351 - Arduino: bar: 3
+12:29:57.351 - Arduino: lick: 9
+12:29:57.352 - Arduino: Solenoid pin state: 0
+12:29:57.355 - Arduino: bar: 3
+12:29:57.355 - Arduino: lick: 8
+12:29:57.359 - Arduino: Solenoid pin state: 0
+12:29:57.363 - Arduino: bar: 3
+12:29:57.363 - Arduino: lick: 9
+12:29:57.363 - Arduino: Solenoid pin state: 0
+12:29:57.367 - Arduino: bar: 3
+12:29:57.371 - Arduino: lick: 9
+12:29:57.372 - Arduino: Solenoid pin state: 0
+12:29:57.376 - Arduino: bar: 2
+12:29:57.376 - Arduino: lick: 9
+12:29:57.380 - Arduino: Solenoid pin state: 0
+12:29:57.384 - Arduino: bar: 3
+12:29:57.384 - Arduino: lick: 8
+12:29:57.385 - Arduino: Solenoid pin state: 0
+12:29:57.388 - Arduino: bar: 3
+12:29:57.388 - Arduino: lick: 8
+12:29:57.392 - Arduino: Solenoid pin state: 0
+12:29:57.396 - Arduino: bar: 3
+12:29:57.396 - Arduino: lick: 8
+12:29:57.396 - Arduino: Solenoid pin state: 0
+12:29:57.401 - Arduino: bar: 2
+12:29:57.405 - Arduino: lick: 9
+12:29:57.405 - Arduino: Solenoid pin state: 0
+12:29:57.408 - Arduino: bar: 2
+12:29:57.408 - Arduino: lick: 8
+12:29:57.412 - Arduino: Solenoid pin state: 0
+12:29:57.417 - Arduino: bar: 3
+12:29:57.417 - Arduino: lick: 9
+12:29:57.417 - Arduino: Solenoid pin state: 0
+12:29:57.421 - Arduino: bar: 3
+12:29:57.421 - Arduino: lick: 9
+12:29:57.425 - Arduino: Solenoid pin state: 0
+12:29:57.429 - Arduino: bar: 3
+12:29:57.429 - Arduino: lick: 9
+12:29:57.429 - Arduino: Solenoid pin state: 0
+12:29:57.433 - Arduino: bar: 3
+12:29:57.433 - Arduino: lick: 9
+12:29:57.437 - Arduino: Solenoid pin state: 0
+12:29:57.442 - Arduino: bar: 3
+12:29:57.442 - Arduino: lick: 8
+12:29:57.446 - Arduino: Solenoid pin state: 0
+12:29:57.446 - Arduino: bar: 3
+12:29:57.450 - Arduino: lick: 9
+12:29:57.450 - Arduino: Solenoid pin state: 0
+12:29:57.454 - Arduino: bar: 2
+12:29:57.454 - Arduino: lick: 8
+12:29:57.458 - Arduino: Solenoid pin state: 0
+12:29:57.463 - Arduino: bar: 3
+12:29:57.463 - Arduino: lick: 9
+12:29:57.463 - Arduino: Solenoid pin state: 0
+12:29:57.467 - Arduino: bar: 3
+12:29:57.467 - Arduino: lick: 8
+12:29:57.471 - Arduino: Solenoid pin state: 0
+12:29:57.475 - Arduino: bar: 4
+12:29:57.475 - Arduino: lick: 9
+12:29:57.478 - Arduino: Solenoid pin state: 0
+12:29:57.478 - Arduino: bar: 3
+12:29:57.482 - Arduino: lick: 9
+12:29:57.483 - Arduino: Solenoid pin state: 0
+12:29:57.486 - Arduino: bar: 3
+12:29:57.487 - Arduino: lick: 9
+12:29:57.491 - Arduino: Solenoid pin state: 0
+12:29:57.495 - Arduino: bar: 3
+12:29:57.495 - Arduino: lick: 8
+12:29:57.495 - Arduino: Solenoid pin state: 0
+12:29:57.499 - Arduino: bar: 4
+12:29:57.499 - Arduino: lick: 9
+12:29:57.503 - Arduino: Solenoid pin state: 0
+12:29:57.507 - Arduino: bar: 3
+12:29:57.507 - Arduino: lick: 8
+12:29:57.511 - Arduino: Solenoid pin state: 0
+12:29:57.511 - Arduino: bar: 4
+12:29:57.516 - Arduino: lick: 8
+12:29:57.516 - Arduino: Solenoid pin state: 0
+12:29:57.519 - Arduino: bar: 3
+12:29:57.519 - Arduino: lick: 9
+12:29:57.523 - Arduino: Solenoid pin state: 0
+12:29:57.527 - Arduino: bar: 3
+12:29:57.527 - Arduino: lick: 9
+12:29:57.528 - Arduino: Solenoid pin state: 0
+12:29:57.532 - Arduino: bar: 3
+12:29:57.532 - Arduino: lick: 9
+12:29:57.536 - Arduino: Solenoid pin state: 0
+12:29:57.540 - Arduino: bar: 3
+12:29:57.540 - Arduino: lick: 8
+12:29:57.543 - Arduino: Solenoid pin state: 0
+12:29:57.544 - Arduino: bar: 3
+12:29:57.548 - Arduino: lick: 9
+12:29:57.548 - Arduino: Solenoid pin state: 0
+12:29:57.552 - Arduino: bar: 3
+12:29:57.552 - Arduino: lick: 9
+12:29:57.556 - Arduino: Solenoid pin state: 0
+12:29:57.560 - Arduino: bar: 3
+12:29:57.560 - Arduino: lick: 9
+12:29:57.561 - Arduino: Solenoid pin state: 0
+12:29:57.564 - Arduino: bar: 4
+12:29:57.565 - Arduino: lick: 8
+12:29:57.568 - Arduino: Solenoid pin state: 0
+12:29:57.572 - Arduino: bar: 3
+12:29:57.572 - Arduino: lick: 8
+12:29:57.576 - Arduino: Solenoid pin state: 0
+12:29:57.576 - Arduino: bar: 4
+12:29:57.580 - Arduino: lick: 9
+12:29:57.581 - Arduino: Solenoid pin state: 0
+12:29:57.584 - Arduino: bar: 4
+12:29:57.584 - Arduino: lick: 8
+12:29:57.588 - Arduino: Solenoid pin state: 0
+12:29:57.593 - Arduino: bar: 3
+12:29:57.593 - Arduino: lick: 9
+12:29:57.593 - Arduino: Solenoid pin state: 0
+12:29:57.597 - Arduino: bar: 4
+12:29:57.597 - Arduino: lick: 9
+12:29:57.601 - Arduino: Solenoid pin state: 0
+12:29:57.605 - Arduino: bar: 3
+12:29:57.606 - Arduino: lick: 11
+12:29:57.610 - Arduino: Solenoid pin state: 0
+12:29:57.614 - Arduino: bar: 3
+12:29:57.614 - Arduino: lick: 52
+12:29:57.614 - Arduino: Solenoid pin state: 0
+12:29:57.622 - Arduino: bar: 4
+12:29:57.622 - Arduino: lick: 69
+12:29:57.622 - Arduino: Solenoid pin state: 0
+12:29:57.630 - Arduino: bar: 3
+12:29:57.631 - Arduino: lick: 73
+12:29:57.631 - Arduino: Solenoid pin state: 0
+12:29:57.634 - Arduino: bar: 3
+12:29:57.638 - Arduino: lick: 77
+12:29:57.638 - Arduino: Solenoid pin state: 0
+12:29:57.642 - Arduino: bar: 3
+12:29:57.646 - Arduino: lick: 80
+12:29:57.646 - Arduino: Solenoid pin state: 0
+12:29:57.650 - Arduino: bar: 3
+12:29:57.654 - Arduino: lick: 80
+12:29:57.654 - Arduino: Solenoid pin state: 0
+12:29:57.659 - Arduino: bar: 4
+12:29:57.663 - Arduino: lick: 80
+12:29:57.663 - Arduino: Solenoid pin state: 0
+12:29:57.667 - Arduino: bar: 3
+12:29:57.671 - Arduino: lick: 80
+12:29:57.671 - Arduino: Solenoid pin state: 0
+12:29:57.675 - Arduino: bar: 3
+12:29:57.679 - Arduino: lick: 81
+12:29:57.679 - Arduino: Solenoid pin state: 0
+12:29:57.683 - Arduino: bar: 3
+12:29:57.683 - Arduino: lick: 80
+12:29:57.687 - Arduino: Solenoid pin state: 0
+12:29:57.691 - Arduino: bar: 3
+12:29:57.691 - Arduino: lick: 81
+12:29:57.696 - Arduino: Solenoid pin state: 0
+12:29:57.699 - Arduino: bar: 3
+12:29:57.699 - Arduino: lick: 81
+12:29:57.703 - Arduino: Solenoid pin state: 0
+12:29:57.707 - Arduino: bar: 4
+12:29:57.707 - Arduino: lick: 81
+12:29:57.712 - Arduino: Solenoid pin state: 0
+12:29:57.716 - Arduino: bar: 3
+12:29:57.716 - Arduino: lick: 81
+12:29:57.720 - Arduino: Solenoid pin state: 0
+12:29:57.724 - Arduino: bar: 4
+12:29:57.724 - Arduino: lick: 81
+12:29:57.728 - Arduino: Solenoid pin state: 0
+12:29:57.732 - Arduino: bar: 4
+12:29:57.733 - Arduino: lick: 81
+12:29:57.737 - Arduino: Solenoid pin state: 0
+12:29:57.741 - Arduino: bar: 3
+12:29:57.741 - Arduino: lick: 80
+12:29:57.745 - Arduino: Solenoid pin state: 0
+12:29:57.749 - Arduino: bar: 3
+12:29:57.749 - Arduino: lick: 81
+12:29:57.752 - Arduino: Solenoid pin state: 0
+12:29:57.757 - Arduino: bar: 3
+12:29:57.757 - Arduino: lick: 81
+12:29:57.761 - Arduino: Solenoid pin state: 0
+12:29:57.765 - Arduino: bar: 3
+12:29:57.766 - Arduino: lick: 81
+12:29:57.769 - Arduino: Solenoid pin state: 0
+12:29:57.773 - Arduino: bar: 3
+12:29:57.773 - Arduino: lick: 84
+12:29:57.777 - Arduino: Solenoid pin state: 0
+12:29:57.782 - Arduino: bar: 3
+12:29:57.782 - Arduino: lick: 91
+12:29:57.786 - Arduino: Solenoid pin state: 0
+12:29:57.789 - Arduino: bar: 3
+12:29:57.789 - Arduino: lick: 90
+12:29:57.793 - Arduino: Solenoid pin state: 0
+12:29:57.798 - Arduino: bar: 3
+12:29:57.798 - Arduino: lick: 91
+12:29:57.802 - Arduino: Solenoid pin state: 0
+12:29:57.806 - Arduino: bar: 4
+12:29:57.806 - Arduino: lick: 88
+12:29:57.811 - Arduino: Solenoid pin state: 0
+12:29:57.815 - Arduino: bar: 3
+12:29:57.815 - Arduino: lick: 88
+12:29:57.819 - Arduino: Solenoid pin state: 0
+12:29:57.823 - Arduino: bar: 3
+12:29:57.823 - Arduino: lick: 88
+12:29:57.827 - Arduino: Solenoid pin state: 0
+12:29:57.830 - Arduino: bar: 3
+12:29:57.831 - Arduino: lick: 87
+12:29:57.834 - Arduino: Solenoid pin state: 0
+12:29:57.838 - Arduino: bar: 4
+12:29:57.838 - Arduino: lick: 88
+12:29:57.842 - Arduino: Solenoid pin state: 0
+12:29:57.847 - Arduino: bar: 3
+12:29:57.847 - Arduino: lick: 85
+12:29:57.851 - Arduino: Solenoid pin state: 0
+12:29:57.855 - Arduino: bar: 3
+12:29:57.855 - Arduino: lick: 84
+12:29:57.859 - Arduino: Solenoid pin state: 0
+12:29:57.863 - Arduino: bar: 3
+12:29:57.863 - Arduino: lick: 83
+12:29:57.867 - Arduino: Solenoid pin state: 0
+12:29:57.871 - Arduino: bar: 3
+12:29:57.871 - Arduino: lick: 83
+12:29:57.875 - Arduino: Solenoid pin state: 0
+12:29:57.880 - Arduino: bar: 3
+12:29:57.880 - Arduino: lick: 81
+12:29:57.884 - Arduino: Solenoid pin state: 0
+12:29:57.888 - Arduino: bar: 3
+12:29:57.888 - Arduino: lick: 82
+12:29:57.892 - Arduino: Solenoid pin state: 0
+12:29:57.896 - Arduino: bar: 4
+12:29:57.896 - Arduino: lick: 80
+12:29:57.900 - Arduino: Solenoid pin state: 0
+12:29:57.905 - Arduino: bar: 3
+12:29:57.905 - Arduino: lick: 82
+12:29:57.909 - Arduino: Solenoid pin state: 0
+12:29:57.913 - Arduino: bar: 4
+12:29:57.913 - Arduino: lick: 81
+12:29:57.917 - Arduino: Solenoid pin state: 0
+12:29:57.921 - Arduino: bar: 3
+12:29:57.921 - Arduino: lick: 83
+12:29:57.925 - Arduino: Solenoid pin state: 0
+12:29:57.929 - Arduino: bar: 3
+12:29:57.929 - Arduino: lick: 82
+12:29:57.929 - Arduino: Solenoid pin state: 0
+12:29:57.937 - Arduino: bar: 4
+12:29:57.937 - Arduino: lick: 82
+12:29:57.937 - Arduino: Solenoid pin state: 0
+12:29:57.945 - Arduino: bar: 3
+12:29:57.945 - Arduino: lick: 84
+12:29:57.946 - Arduino: Solenoid pin state: 0
+12:29:57.954 - Arduino: bar: 3
+12:29:57.954 - Arduino: lick: 84
+12:29:57.954 - Arduino: Solenoid pin state: 0
+12:29:57.962 - Arduino: bar: 3
+12:29:57.962 - Arduino: lick: 84
+12:29:57.962 - Arduino: Solenoid pin state: 0
+12:29:57.970 - Arduino: bar: 3
+12:29:57.970 - Arduino: lick: 83
+12:29:57.970 - Arduino: Solenoid pin state: 0
+12:29:57.978 - Arduino: bar: 3
+12:29:57.978 - Arduino: lick: 84
+12:29:57.978 - Arduino: Solenoid pin state: 0
+12:29:57.986 - Arduino: bar: 4
+12:29:57.986 - Arduino: lick: 83
+12:29:57.987 - Arduino: Solenoid pin state: 0
+12:29:57.994 - Arduino: bar: 3
+12:29:57.995 - Arduino: lick: 83
+12:29:57.995 - Arduino: Solenoid pin state: 0
+12:29:58.003 - Arduino: bar: 4
+12:29:58.003 - Arduino: lick: 83
+12:29:58.003 - Arduino: Solenoid pin state: 0
+12:29:58.011 - Arduino: bar: 3
+12:29:58.011 - Arduino: lick: 82
+12:29:58.011 - Arduino: Solenoid pin state: 0
+12:29:58.019 - Arduino: bar: 3
+12:29:58.019 - Arduino: lick: 79
+12:29:58.020 - Arduino: Solenoid pin state: 0
+12:29:58.023 - Arduino: bar: 3
+12:29:58.027 - Arduino: lick: 66
+12:29:58.027 - Arduino: Solenoid pin state: 0
+12:29:58.031 - Arduino: bar: 3
+12:29:58.035 - Arduino: lick: 66
+12:29:58.036 - Arduino: Solenoid pin state: 0
+12:29:58.040 - Arduino: bar: 3
+12:29:58.040 - Arduino: lick: 65
+12:29:58.044 - Arduino: Solenoid pin state: 0
+12:29:58.048 - Arduino: bar: 3
+12:29:58.048 - Arduino: lick: 65
+12:29:58.052 - Arduino: Solenoid pin state: 0
+12:29:58.056 - Arduino: bar: 3
+12:29:58.056 - Arduino: lick: 65
+12:29:58.060 - Arduino: Solenoid pin state: 0
+12:29:58.064 - Arduino: bar: 3
+12:29:58.065 - Arduino: lick: 65
+12:29:58.068 - Arduino: Solenoid pin state: 0
+12:29:58.073 - Arduino: bar: 4
+12:29:58.073 - Arduino: lick: 66
+12:29:58.076 - Arduino: Solenoid pin state: 0
+12:29:58.081 - Arduino: bar: 3
+12:29:58.081 - Arduino: lick: 65
+12:29:58.081 - Arduino: Solenoid pin state: 0
+12:29:58.089 - Arduino: bar: 3
+12:29:58.089 - Arduino: lick: 65
+12:29:58.089 - Arduino: Solenoid pin state: 0
+12:29:58.093 - Arduino: bar: 3
+12:29:58.097 - Arduino: lick: 63
+12:29:58.097 - Arduino: Solenoid pin state: 0
+12:29:58.101 - Arduino: bar: 3
+12:29:58.105 - Arduino: lick: 64
+12:29:58.105 - Arduino: Solenoid pin state: 0
+12:29:58.109 - Arduino: bar: 3
+12:29:58.109 - Arduino: lick: 64
+12:29:58.113 - Arduino: Solenoid pin state: 0
+12:29:58.117 - Arduino: bar: 4
+12:29:58.117 - Arduino: lick: 64
+12:29:58.122 - Arduino: Solenoid pin state: 0
+12:29:58.126 - Arduino: bar: 3
+12:29:58.126 - Arduino: lick: 64
+12:29:58.130 - Arduino: Solenoid pin state: 0
+12:29:58.134 - Arduino: bar: 3
+12:29:58.134 - Arduino: lick: 63
+12:29:58.138 - Arduino: Solenoid pin state: 0
+12:29:58.142 - Arduino: bar: 3
+12:29:58.142 - Arduino: lick: 63
+12:29:58.143 - Arduino: Solenoid pin state: 0
+12:29:58.151 - Arduino: bar: 3
+12:29:58.151 - Arduino: lick: 63
+12:29:58.151 - Arduino: Solenoid pin state: 0
+12:29:58.159 - Arduino: bar: 3
+12:29:58.159 - Arduino: lick: 64
+12:29:58.159 - Arduino: Solenoid pin state: 0
+12:29:58.163 - Arduino: bar: 3
+12:29:58.167 - Arduino: lick: 63
+12:29:58.167 - Arduino: Solenoid pin state: 0
+12:29:58.171 - Arduino: bar: 4
+12:29:58.175 - Arduino: lick: 64
+12:29:58.175 - Arduino: Solenoid pin state: 0
+12:29:58.179 - Arduino: bar: 3
+12:29:58.179 - Arduino: lick: 63
+12:29:58.183 - Arduino: Solenoid pin state: 0
+12:29:58.187 - Arduino: bar: 4
+12:29:58.187 - Arduino: lick: 65
+12:29:58.192 - Arduino: Solenoid pin state: 0
+12:29:58.196 - Arduino: bar: 3
+12:29:58.196 - Arduino: lick: 66
+12:29:58.200 - Arduino: Solenoid pin state: 0
+12:29:58.203 - Arduino: bar: 3
+12:29:58.203 - Arduino: lick: 66
+12:29:58.207 - Arduino: Solenoid pin state: 0
+12:29:58.211 - Arduino: bar: 4
+12:29:58.212 - Arduino: lick: 67
+12:29:58.212 - Arduino: Solenoid pin state: 0
+12:29:58.220 - Arduino: bar: 3
+12:29:58.220 - Arduino: lick: 67
+12:29:58.220 - Arduino: Solenoid pin state: 0
+12:29:58.228 - Arduino: bar: 3
+12:29:58.228 - Arduino: lick: 67
+12:29:58.228 - Arduino: Solenoid pin state: 0
+12:29:58.232 - Arduino: bar: 3
+12:29:58.236 - Arduino: lick: 68
+12:29:58.236 - Arduino: Solenoid pin state: 0
+12:29:58.240 - Arduino: bar: 3
+12:29:58.244 - Arduino: lick: 67
+12:29:58.245 - Arduino: Solenoid pin state: 0
+12:29:58.248 - Arduino: bar: 3
+12:29:58.252 - Arduino: lick: 67
+12:29:58.252 - Arduino: Solenoid pin state: 0
+12:29:58.256 - Arduino: bar: 3
+12:29:58.256 - Arduino: lick: 67
+12:29:58.260 - Arduino: Solenoid pin state: 0
+12:29:58.265 - Arduino: bar: 3
+12:29:58.265 - Arduino: lick: 67
+12:29:58.269 - Arduino: Solenoid pin state: 0
+12:29:58.273 - Arduino: bar: 3
+12:29:58.273 - Arduino: lick: 67
+12:29:58.277 - Arduino: Solenoid pin state: 0
+12:29:58.281 - Arduino: bar: 3
+12:29:58.281 - Arduino: lick: 68
+12:29:58.285 - Arduino: Solenoid pin state: 0
+12:29:58.289 - Arduino: bar: 4
+12:29:58.289 - Arduino: lick: 66
+12:29:58.289 - Arduino: Solenoid pin state: 0
+12:29:58.297 - Arduino: bar: 3
+12:29:58.297 - Arduino: lick: 68
+12:29:58.298 - Arduino: Solenoid pin state: 0
+12:29:58.306 - Arduino: bar: 4
+12:29:58.306 - Arduino: lick: 64
+12:29:58.306 - Arduino: Solenoid pin state: 0
+12:29:58.314 - Arduino: bar: 3
+12:29:58.314 - Arduino: lick: 67
+12:29:58.315 - Arduino: Solenoid pin state: 0
+12:29:58.318 - Arduino: bar: 3
+12:29:58.322 - Arduino: lick: 65
+12:29:58.322 - Arduino: Solenoid pin state: 0
+12:29:58.326 - Arduino: bar: 3
+12:29:58.326 - Arduino: lick: 11
+12:29:58.330 - Arduino: Solenoid pin state: 0
+12:29:58.335 - Arduino: bar: 4
+12:29:58.335 - Arduino: lick: 9
+12:29:58.335 - Arduino: Solenoid pin state: 0
+12:29:58.339 - Arduino: bar: 4
+12:29:58.339 - Arduino: lick: 9
+12:29:58.343 - Arduino: Solenoid pin state: 0
+12:29:58.347 - Arduino: bar: 4
+12:29:58.347 - Arduino: lick: 8
+12:29:58.347 - Arduino: Solenoid pin state: 0
+12:29:58.351 - Arduino: bar: 3
+12:29:58.355 - Arduino: lick: 8
+12:29:58.355 - Arduino: Solenoid pin state: 0
+12:29:58.359 - Arduino: bar: 3
+12:29:58.359 - Arduino: lick: 9
+12:29:58.363 - Arduino: Solenoid pin state: 0
+12:29:58.367 - Arduino: bar: 4
+12:29:58.368 - Arduino: lick: 8
+12:29:58.368 - Arduino: Solenoid pin state: 0
+12:29:58.371 - Arduino: bar: 3
+12:29:58.371 - Arduino: lick: 8
+12:29:58.376 - Arduino: Solenoid pin state: 0
+12:29:58.380 - Arduino: bar: 3
+12:29:58.380 - Arduino: lick: 8
+12:29:58.380 - Arduino: Solenoid pin state: 0
+12:29:58.384 - Arduino: bar: 3
+12:29:58.388 - Arduino: lick: 9
+12:29:58.388 - Arduino: Solenoid pin state: 0
+12:29:58.392 - Arduino: bar: 4
+12:29:58.392 - Arduino: lick: 9
+12:29:58.396 - Arduino: Solenoid pin state: 0
+12:29:58.400 - Arduino: bar: 2
+12:29:58.400 - Arduino: lick: 9
+12:29:58.400 - Arduino: Solenoid pin state: 0
+12:29:58.404 - Arduino: bar: 3
+12:29:58.404 - Arduino: lick: 9
+12:29:58.408 - Arduino: Solenoid pin state: 0
+12:29:58.411 - Arduino: bar: 4
+12:29:58.413 - Arduino: lick: 9
+12:29:58.413 - Arduino: Solenoid pin state: 0
+12:29:58.416 - Arduino: bar: 3
+12:29:58.420 - Arduino: lick: 9
+12:29:58.420 - Arduino: Solenoid pin state: 0
+12:29:58.424 - Arduino: bar: 4
+12:29:58.424 - Arduino: lick: 9
+12:29:58.428 - Arduino: Solenoid pin state: 0
+12:29:58.432 - Arduino: bar: 2
+12:29:58.433 - Arduino: lick: 9
+12:29:58.433 - Arduino: Solenoid pin state: 0
+12:29:58.436 - Arduino: bar: 3
+12:29:58.436 - Arduino: lick: 8
+12:29:58.441 - Arduino: Solenoid pin state: 0
+12:29:58.445 - Arduino: bar: 3
+12:29:58.445 - Arduino: lick: 9
+12:29:58.445 - Arduino: Solenoid pin state: 0
+12:29:58.449 - Arduino: bar: 3
+12:29:58.453 - Arduino: lick: 9
+12:29:58.453 - Arduino: Solenoid pin state: 0
+12:29:58.457 - Arduino: bar: 3
+12:29:58.457 - Arduino: lick: 9
+12:29:58.461 - Arduino: Solenoid pin state: 0
+12:29:58.466 - Arduino: bar: 4
+12:29:58.466 - Arduino: lick: 9
+12:29:58.466 - Arduino: Solenoid pin state: 0
+12:29:58.470 - Arduino: bar: 3
+12:29:58.470 - Arduino: lick: 8
+12:29:58.474 - Arduino: Solenoid pin state: 0
+12:29:58.478 - Arduino: bar: 3
+12:29:58.478 - Arduino: lick: 8
+12:29:58.478 - Arduino: Solenoid pin state: 0
+12:29:58.482 - Arduino: bar: 2
+12:29:58.486 - Arduino: lick: 8
+12:29:58.486 - Arduino: Solenoid pin state: 0
+12:29:58.490 - Arduino: bar: 3
+12:29:58.490 - Arduino: lick: 8
+12:29:58.494 - Arduino: Solenoid pin state: 0
+12:29:58.498 - Arduino: bar: 4
+12:29:58.498 - Arduino: lick: 8
+12:29:58.498 - Arduino: Solenoid pin state: 0
+12:29:58.502 - Arduino: bar: 3
+12:29:58.502 - Arduino: lick: 8
+12:29:58.507 - Arduino: Solenoid pin state: 0
+12:29:58.511 - Arduino: bar: 3
+12:29:58.511 - Arduino: lick: 8
+12:29:58.511 - Arduino: Solenoid pin state: 0
+12:29:58.515 - Arduino: bar: 2
+12:29:58.519 - Arduino: lick: 9
+12:29:58.519 - Arduino: Solenoid pin state: 0
+12:29:58.523 - Arduino: bar: 3
+12:29:58.523 - Arduino: lick: 8
+12:29:58.527 - Arduino: Solenoid pin state: 0
+12:29:58.531 - Arduino: bar: 3
+12:29:58.532 - Arduino: lick: 9
+12:29:58.532 - Arduino: Solenoid pin state: 0
+12:29:58.535 - Arduino: bar: 4
+12:29:58.536 - Arduino: lick: 9
+12:29:58.540 - Arduino: Solenoid pin state: 0
+12:29:58.544 - Arduino: bar: 3
+12:29:58.544 - Arduino: lick: 9
+12:29:58.544 - Arduino: Solenoid pin state: 0
+12:29:58.548 - Arduino: bar: 4
+12:29:58.552 - Arduino: lick: 8
+12:29:58.552 - Arduino: Solenoid pin state: 0
+12:29:58.556 - Arduino: bar: 3
+12:29:58.556 - Arduino: lick: 9
+12:29:58.560 - Arduino: Solenoid pin state: 0
+12:29:58.564 - Arduino: bar: 3
+12:29:58.564 - Arduino: lick: 8
+12:29:58.564 - Arduino: Solenoid pin state: 0
+12:29:58.568 - Arduino: bar: 3
+12:29:58.568 - Arduino: lick: 9
+12:29:58.572 - Arduino: Solenoid pin state: 0
+12:29:58.577 - Arduino: bar: 3
+12:29:58.577 - Arduino: lick: 8
+12:29:58.577 - Arduino: Solenoid pin state: 0
+12:29:58.581 - Arduino: bar: 4
+12:29:58.585 - Arduino: lick: 8
+12:29:58.585 - Arduino: Solenoid pin state: 0
+12:29:58.589 - Arduino: bar: 2
+12:29:58.589 - Arduino: lick: 9
+12:29:58.593 - Arduino: Solenoid pin state: 0
+12:29:58.597 - Arduino: bar: 3
+12:29:58.597 - Arduino: lick: 9
+12:29:58.597 - Arduino: Solenoid pin state: 0
+12:29:58.601 - Arduino: bar: 4
+12:29:58.601 - Arduino: lick: 8
+12:29:58.605 - Arduino: Solenoid pin state: 0
+12:29:58.608 - Arduino: bar: 2
+12:29:58.609 - Arduino: lick: 9
+12:29:58.609 - Arduino: Solenoid pin state: 0
+12:29:58.612 - Arduino: bar: 3
+12:29:58.613 - Arduino: lick: 8
+12:29:58.617 - Arduino: Solenoid pin state: 0
+12:29:58.621 - Arduino: bar: 3
+12:29:58.621 - Arduino: lick: 8
+12:29:58.625 - Arduino: Solenoid pin state: 0
+12:29:58.625 - Arduino: bar: 4
+12:29:58.629 - Arduino: lick: 9
+12:29:58.629 - Arduino: Solenoid pin state: 0
+12:29:58.633 - Arduino: bar: 3
+12:29:58.633 - Arduino: lick: 9
+12:29:58.637 - Arduino: Solenoid pin state: 0
+12:29:58.641 - Arduino: bar: 2
+12:29:58.641 - Arduino: lick: 8
+12:29:58.641 - Arduino: Solenoid pin state: 0
+12:29:58.645 - Arduino: bar: 3
+12:29:58.645 - Arduino: lick: 9
+12:29:58.650 - Arduino: Solenoid pin state: 0
+12:29:58.654 - Arduino: bar: 3
+12:29:58.654 - Arduino: lick: 8
+12:29:58.658 - Arduino: Solenoid pin state: 0
+12:29:58.658 - Arduino: bar: 3
+12:29:58.662 - Arduino: lick: 9
+12:29:58.663 - Arduino: Solenoid pin state: 0
+12:29:58.666 - Arduino: bar: 4
+12:29:58.666 - Arduino: lick: 9
+12:29:58.670 - Arduino: Solenoid pin state: 0
+12:29:58.674 - Arduino: bar: 3
+12:29:58.674 - Arduino: lick: 9
+12:29:58.674 - Arduino: Solenoid pin state: 0
+12:29:58.678 - Arduino: bar: 3
+12:29:58.678 - Arduino: lick: 9
+12:29:58.682 - Arduino: Solenoid pin state: 0
+12:29:58.686 - Arduino: bar: 4
+12:29:58.687 - Arduino: lick: 8
+12:29:58.691 - Arduino: Solenoid pin state: 0
+12:29:58.691 - Arduino: bar: 3
+12:29:58.695 - Arduino: lick: 9
+12:29:58.696 - Arduino: Solenoid pin state: 0
+12:29:58.699 - Arduino: bar: 4
+12:29:58.700 - Arduino: lick: 8
+12:29:58.703 - Arduino: Solenoid pin state: 0
+12:29:58.707 - Arduino: bar: 3
+12:29:58.708 - Arduino: lick: 9
+12:29:58.708 - Arduino: Solenoid pin state: 0
+12:29:58.711 - Arduino: bar: 4
+12:29:58.712 - Arduino: lick: 9
+12:29:58.716 - Arduino: Solenoid pin state: 0
+12:29:58.720 - Arduino: bar: 3
+12:29:58.720 - Arduino: lick: 9
+12:29:58.724 - Arduino: Solenoid pin state: 0
+12:29:58.724 - Arduino: bar: 3
+12:29:58.728 - Arduino: lick: 9
+12:29:58.728 - Arduino: Solenoid pin state: 0
+12:29:58.732 - Arduino: bar: 4
+12:29:58.732 - Arduino: lick: 9
+12:29:58.736 - Arduino: Solenoid pin state: 0
+12:29:58.740 - Arduino: bar: 2
+12:29:58.740 - Arduino: lick: 9
+12:29:58.741 - Arduino: Solenoid pin state: 0
+12:29:58.744 - Arduino: bar: 4
+12:29:58.744 - Arduino: lick: 9
+12:29:58.749 - Arduino: Solenoid pin state: 0
+12:29:58.753 - Arduino: bar: 4
+12:29:58.753 - Arduino: lick: 8
+12:29:58.756 - Arduino: Solenoid pin state: 0
+12:29:58.757 - Arduino: bar: 3
+12:29:58.761 - Arduino: lick: 9
+12:29:58.761 - Arduino: Solenoid pin state: 0
+12:29:58.765 - Arduino: bar: 3
+12:29:58.765 - Arduino: lick: 9
+12:29:58.769 - Arduino: Solenoid pin state: 0
+12:29:58.773 - Arduino: bar: 3
+12:29:58.773 - Arduino: lick: 9
+12:29:58.773 - Arduino: Solenoid pin state: 0
+12:29:58.777 - Arduino: bar: 3
+12:29:58.777 - Arduino: lick: 9
+12:29:58.781 - Arduino: Solenoid pin state: 0
+12:29:58.785 - Arduino: bar: 3
+12:29:58.785 - Arduino: lick: 8
+12:29:58.789 - Arduino: Solenoid pin state: 0
+12:29:58.789 - Arduino: bar: 3
+12:29:58.793 - Arduino: lick: 8
+12:29:58.793 - Arduino: Solenoid pin state: 0
+12:29:58.797 - Arduino: bar: 3
+12:29:58.797 - Arduino: lick: 9
+12:29:58.801 - Arduino: Solenoid pin state: 0
+12:29:58.806 - Arduino: bar: 3
+12:29:58.806 - Arduino: lick: 9
+12:29:58.806 - Arduino: Solenoid pin state: 0
+12:29:58.810 - Arduino: bar: 3
+12:29:58.810 - Arduino: lick: 9
+12:29:58.814 - Arduino: Solenoid pin state: 0
+12:29:58.818 - Arduino: bar: 4
+12:29:58.818 - Arduino: lick: 9
+12:29:58.818 - Arduino: Solenoid pin state: 0
+12:29:58.822 - Arduino: bar: 3
+12:29:58.826 - Arduino: lick: 9
+12:29:58.826 - Arduino: Solenoid pin state: 0
+12:29:58.830 - Arduino: bar: 3
+12:29:58.830 - Arduino: lick: 8
+12:29:58.834 - Arduino: Solenoid pin state: 0
+12:29:58.838 - Arduino: bar: 3
+12:29:58.839 - Arduino: lick: 9
+12:29:58.839 - Arduino: Solenoid pin state: 0
+12:29:58.842 - Arduino: bar: 3
+12:29:58.843 - Arduino: lick: 9
+12:29:58.847 - Arduino: Solenoid pin state: 0
+12:29:58.851 - Arduino: bar: 4
+12:29:58.851 - Arduino: lick: 8
+12:29:58.851 - Arduino: Solenoid pin state: 0
+12:29:58.855 - Arduino: bar: 3
+12:29:58.859 - Arduino: lick: 9
+12:29:58.859 - Arduino: Solenoid pin state: 0
+12:29:58.863 - Arduino: bar: 3
+12:29:58.863 - Arduino: lick: 9
+12:29:58.867 - Arduino: Solenoid pin state: 0
+12:29:58.871 - Arduino: bar: 4
+12:29:58.871 - Arduino: lick: 8
+12:29:58.872 - Arduino: Solenoid pin state: 0
+12:29:58.875 - Arduino: bar: 2
+12:29:58.875 - Arduino: lick: 9
+12:29:58.879 - Arduino: Solenoid pin state: 0
+12:29:58.884 - Arduino: bar: 3
+12:29:58.884 - Arduino: lick: 8
+12:29:58.884 - Arduino: Solenoid pin state: 0
+12:29:58.887 - Arduino: bar: 3
+12:29:58.892 - Arduino: lick: 9
+12:29:58.892 - Arduino: Solenoid pin state: 0
+12:29:58.896 - Arduino: bar: 3
+12:29:58.896 - Arduino: lick: 9
+12:29:58.900 - Arduino: Solenoid pin state: 0
+12:29:58.904 - Arduino: bar: 4
+12:29:58.904 - Arduino: lick: 9
+12:29:58.904 - Arduino: Solenoid pin state: 0
+12:29:58.908 - Arduino: bar: 3
+12:29:58.908 - Arduino: lick: 9
+12:29:58.912 - Arduino: Solenoid pin state: 0
+12:29:58.916 - Arduino: bar: 3
+12:29:58.916 - Arduino: lick: 9
+12:29:58.916 - Arduino: Solenoid pin state: 0
+12:29:58.920 - Arduino: bar: 3
+12:29:58.924 - Arduino: lick: 9
+12:29:58.925 - Arduino: Solenoid pin state: 0
+12:29:58.928 - Arduino: bar: 3
+12:29:58.929 - Arduino: lick: 8
+12:29:58.932 - Arduino: Solenoid pin state: 0
+12:29:58.937 - Arduino: bar: 4
+12:29:58.937 - Arduino: lick: 8
+12:29:58.937 - Arduino: Solenoid pin state: 0
+12:29:58.941 - Arduino: bar: 3
+12:29:58.941 - Arduino: lick: 9
+12:29:58.945 - Arduino: Solenoid pin state: 0
+12:29:58.949 - Arduino: bar: 3
+12:29:58.949 - Arduino: lick: 9
+12:29:58.949 - Arduino: Solenoid pin state: 0
+12:29:58.952 - Arduino: bar: 3
+12:29:58.957 - Arduino: lick: 9
+12:29:58.957 - Arduino: Solenoid pin state: 0
+12:29:58.961 - Arduino: bar: 2
+12:29:58.961 - Arduino: lick: 9
+12:29:58.965 - Arduino: Solenoid pin state: 0
+12:29:58.969 - Arduino: bar: 3
+12:29:58.969 - Arduino: lick: 8
+12:29:58.969 - Arduino: Solenoid pin state: 0
+12:29:58.973 - Arduino: bar: 2
+12:29:58.973 - Arduino: lick: 9
+12:29:58.977 - Arduino: Solenoid pin state: 0
+12:29:58.981 - Arduino: bar: 4
+12:29:58.981 - Arduino: lick: 9
+12:29:58.982 - Arduino: Solenoid pin state: 0
+12:29:58.985 - Arduino: bar: 3
+12:29:58.989 - Arduino: lick: 9
+12:29:58.990 - Arduino: Solenoid pin state: 0
+12:29:58.994 - Arduino: bar: 3
+12:29:58.994 - Arduino: lick: 9
+12:29:58.998 - Arduino: Solenoid pin state: 0
+12:29:59.001 - Arduino: bar: 3
+12:29:59.001 - Arduino: lick: 8
+12:29:59.003 - Arduino: Solenoid pin state: 0
+12:29:59.006 - Arduino: bar: 3
+12:29:59.006 - Arduino: lick: 9
+12:29:59.011 - Arduino: Solenoid pin state: 0
+12:29:59.014 - Arduino: bar: 3
+12:29:59.014 - Arduino: lick: 9
+12:29:59.015 - Arduino: Solenoid pin state: 0
+12:29:59.018 - Arduino: bar: 3
+12:29:59.022 - Arduino: lick: 9
+12:29:59.022 - Arduino: Solenoid pin state: 0
+12:29:59.026 - Arduino: bar: 3
+12:29:59.026 - Arduino: lick: 8
+12:29:59.030 - Arduino: Solenoid pin state: 0
+12:29:59.035 - Arduino: bar: 3
+12:29:59.035 - Arduino: lick: 9
+12:29:59.035 - Arduino: Solenoid pin state: 0
+12:29:59.039 - Arduino: bar: 2
+12:29:59.039 - Arduino: lick: 8
+12:29:59.043 - Arduino: Solenoid pin state: 0
+12:29:59.047 - Arduino: bar: 2
+12:29:59.047 - Arduino: lick: 9
+12:29:59.047 - Arduino: Solenoid pin state: 0
+12:29:59.051 - Arduino: bar: 4
+12:29:59.055 - Arduino: lick: 8
+12:29:59.055 - Arduino: Solenoid pin state: 0
+12:29:59.059 - Arduino: bar: 2
+12:29:59.059 - Arduino: lick: 9
+12:29:59.063 - Arduino: Solenoid pin state: 0
+12:29:59.067 - Arduino: bar: 3
+12:29:59.067 - Arduino: lick: 9
+12:29:59.067 - Arduino: Solenoid pin state: 0
+12:29:59.071 - Arduino: bar: 3
+12:29:59.071 - Arduino: lick: 8
+12:29:59.075 - Arduino: Solenoid pin state: 0
+12:29:59.080 - Arduino: bar: 2
+12:29:59.080 - Arduino: lick: 9
+12:29:59.080 - Arduino: Solenoid pin state: 0
+12:29:59.084 - Arduino: bar: 4
+12:29:59.088 - Arduino: lick: 8
+12:29:59.088 - Arduino: Solenoid pin state: 0
+12:29:59.092 - Arduino: bar: 3
+12:29:59.092 - Arduino: lick: 9
+12:29:59.096 - Arduino: Solenoid pin state: 0
+12:29:59.100 - Arduino: bar: 3
+12:29:59.100 - Arduino: lick: 9
+12:29:59.100 - Arduino: Solenoid pin state: 0
+12:29:59.105 - Arduino: bar: 3
+12:29:59.105 - Arduino: lick: 9
+12:29:59.109 - Arduino: Solenoid pin state: 0
+12:29:59.113 - Arduino: bar: 3
+12:29:59.113 - Arduino: lick: 9
+12:29:59.113 - Arduino: Solenoid pin state: 0
+12:29:59.117 - Arduino: bar: 3
+12:29:59.121 - Arduino: lick: 9
+12:29:59.121 - Arduino: Solenoid pin state: 0
+12:29:59.125 - Arduino: bar: 2
+12:29:59.125 - Arduino: lick: 8
+12:29:59.129 - Arduino: Solenoid pin state: 0
+12:29:59.133 - Arduino: bar: 2
+12:29:59.134 - Arduino: lick: 8
+12:29:59.134 - Arduino: Solenoid pin state: 0
+12:29:59.137 - Arduino: bar: 3
+12:29:59.137 - Arduino: lick: 8
+12:29:59.141 - Arduino: Solenoid pin state: 0
+12:29:59.145 - Arduino: bar: 2
+12:29:59.145 - Arduino: lick: 9
+12:29:59.146 - Arduino: Solenoid pin state: 0
+12:29:59.149 - Arduino: bar: 4
+12:29:59.149 - Arduino: lick: 8
+12:29:59.153 - Arduino: Solenoid pin state: 0
+12:29:59.158 - Arduino: bar: 3
+12:29:59.158 - Arduino: lick: 9
+12:29:59.162 - Arduino: Solenoid pin state: 0
+12:29:59.162 - Arduino: bar: 3
+12:29:59.166 - Arduino: lick: 8
+12:29:59.166 - Arduino: Solenoid pin state: 0
+12:29:59.170 - Arduino: bar: 3
+12:29:59.170 - Arduino: lick: 8
+12:29:59.174 - Arduino: Solenoid pin state: 0
+12:29:59.178 - Arduino: bar: 2
+12:29:59.178 - Arduino: lick: 9
+12:29:59.178 - Arduino: Solenoid pin state: 0
+12:29:59.182 - Arduino: bar: 3
+12:29:59.182 - Arduino: lick: 9
+12:29:59.186 - Arduino: Solenoid pin state: 0
+12:29:59.190 - Arduino: bar: 3
+12:29:59.190 - Arduino: lick: 9
+12:29:59.194 - Arduino: Solenoid pin state: 0
+12:29:59.194 - Arduino: bar: 3
+12:29:59.198 - Arduino: lick: 9
+12:29:59.199 - Arduino: Solenoid pin state: 0
+12:29:59.203 - Arduino: bar: 3
+12:29:59.203 - Arduino: lick: 9
+12:29:59.207 - Arduino: Solenoid pin state: 0
+12:29:59.211 - Arduino: bar: 3
+12:29:59.211 - Arduino: lick: 9
+12:29:59.211 - Arduino: Solenoid pin state: 0
+12:29:59.215 - Arduino: bar: 3
+12:29:59.215 - Arduino: lick: 8
+12:29:59.219 - Arduino: Solenoid pin state: 0
+12:29:59.223 - Arduino: bar: 3
+12:29:59.224 - Arduino: lick: 9
+12:29:59.227 - Arduino: Solenoid pin state: 0
+12:29:59.227 - Arduino: bar: 3
+12:29:59.232 - Arduino: lick: 8
+12:29:59.232 - Arduino: Solenoid pin state: 0
+12:29:59.236 - Arduino: bar: 3
+12:29:59.236 - Arduino: lick: 9
+12:29:59.240 - Arduino: Solenoid pin state: 0
+12:29:59.244 - Arduino: bar: 3
+12:29:59.244 - Arduino: lick: 9
+12:29:59.244 - Arduino: Solenoid pin state: 0
+12:29:59.248 - Arduino: bar: 2
+12:29:59.248 - Arduino: lick: 9
+12:29:59.252 - Arduino: Solenoid pin state: 0
+12:29:59.256 - Arduino: bar: 3
+12:29:59.256 - Arduino: lick: 8
+12:29:59.256 - Arduino: Solenoid pin state: 0
+12:29:59.260 - Arduino: bar: 3
+12:29:59.264 - Arduino: lick: 8
+12:29:59.265 - Arduino: Solenoid pin state: 0
+12:29:59.268 - Arduino: bar: 4
+12:29:59.269 - Arduino: lick: 9
+12:29:59.273 - Arduino: Solenoid pin state: 0
+12:29:59.276 - Arduino: bar: 3
+12:29:59.276 - Arduino: lick: 9
+12:29:59.277 - Arduino: Solenoid pin state: 0
+12:29:59.280 - Arduino: bar: 2
+12:29:59.280 - Arduino: lick: 9
+12:29:59.285 - Arduino: Solenoid pin state: 0
+12:29:59.289 - Arduino: bar: 4
+12:29:59.289 - Arduino: lick: 8
+12:29:59.289 - Arduino: Solenoid pin state: 0
+12:29:59.293 - Arduino: bar: 3
+12:29:59.297 - Arduino: lick: 9
+12:29:59.297 - Arduino: Solenoid pin state: 0
+12:29:59.301 - Arduino: bar: 3
+12:29:59.301 - Arduino: lick: 9
+12:29:59.305 - Arduino: Solenoid pin state: 0
+12:29:59.309 - Arduino: bar: 3
+12:29:59.309 - Arduino: lick: 8
+12:29:59.309 - Arduino: Solenoid pin state: 0
+12:29:59.313 - Arduino: bar: 2
+12:29:59.313 - Arduino: lick: 9
+12:29:59.317 - Arduino: Solenoid pin state: 0
+12:29:59.321 - Arduino: bar: 4
+12:29:59.321 - Arduino: lick: 9
+12:29:59.321 - Arduino: Solenoid pin state: 0
+12:29:59.325 - Arduino: bar: 2
+12:29:59.329 - Arduino: lick: 9
+12:29:59.329 - Arduino: Solenoid pin state: 0
+12:29:59.333 - Arduino: bar: 3
+12:29:59.334 - Arduino: lick: 9
+12:29:59.337 - Arduino: Solenoid pin state: 0
+12:29:59.342 - Arduino: bar: 4
+12:29:59.342 - Arduino: lick: 9
+12:29:59.342 - Arduino: Solenoid pin state: 0
+12:29:59.346 - Arduino: bar: 2
+12:29:59.346 - Arduino: lick: 9
+12:29:59.350 - Arduino: Solenoid pin state: 0
+12:29:59.354 - Arduino: bar: 3
+12:29:59.354 - Arduino: lick: 9
+12:29:59.354 - Arduino: Solenoid pin state: 0
+12:29:59.358 - Arduino: bar: 4
+12:29:59.363 - Arduino: lick: 9
+12:29:59.363 - Arduino: Solenoid pin state: 0
+12:29:59.367 - Arduino: bar: 3
+12:29:59.367 - Arduino: lick: 9
+12:29:59.371 - Arduino: Solenoid pin state: 0
+12:29:59.375 - Arduino: bar: 4
+12:29:59.375 - Arduino: lick: 9
+12:29:59.375 - Arduino: Solenoid pin state: 0
+12:29:59.379 - Arduino: bar: 2
+12:29:59.379 - Arduino: lick: 8
+12:29:59.383 - Arduino: Solenoid pin state: 0
+12:29:59.387 - Arduino: bar: 3
+12:29:59.387 - Arduino: lick: 9
+12:29:59.387 - Arduino: Solenoid pin state: 0
+12:29:59.391 - Arduino: bar: 3
+12:29:59.395 - Arduino: lick: 9
+12:29:59.395 - Arduino: Solenoid pin state: 0
+12:29:59.399 - Arduino: bar: 3
+12:29:59.399 - Arduino: lick: 9
+12:29:59.403 - Arduino: Solenoid pin state: 0
+12:29:59.407 - Arduino: bar: 4
+12:29:59.407 - Arduino: lick: 9
+12:29:59.407 - Arduino: Solenoid pin state: 0
+12:29:59.411 - Arduino: bar: 3
+12:29:59.411 - Arduino: lick: 9
+12:29:59.415 - Arduino: Solenoid pin state: 0
+12:29:59.419 - Arduino: bar: 3
+12:29:59.419 - Arduino: lick: 8
+12:29:59.420 - Arduino: Solenoid pin state: 0
+12:29:59.423 - Arduino: bar: 4
+12:29:59.427 - Arduino: lick: 9
+12:29:59.428 - Arduino: Solenoid pin state: 0
+12:29:59.432 - Arduino: bar: 2
+12:29:59.432 - Arduino: lick: 9
+12:29:59.436 - Arduino: Solenoid pin state: 0
+12:29:59.440 - Arduino: bar: 3
+12:29:59.440 - Arduino: lick: 9
+12:29:59.440 - Arduino: Solenoid pin state: 0
+12:29:59.444 - Arduino: bar: 3
+12:29:59.444 - Arduino: lick: 9
+12:29:59.448 - Arduino: Solenoid pin state: 0
+12:29:59.452 - Arduino: bar: 3
+12:29:59.452 - Arduino: lick: 8
+12:29:59.452 - Arduino: Solenoid pin state: 0
+12:29:59.456 - Arduino: bar: 3
+12:29:59.460 - Arduino: lick: 9
+12:29:59.460 - Arduino: Solenoid pin state: 0
+12:29:59.464 - Arduino: bar: 3
+12:29:59.464 - Arduino: lick: 8
+12:29:59.468 - Arduino: Solenoid pin state: 0
+12:29:59.473 - Arduino: bar: 2
+12:29:59.473 - Arduino: lick: 8
+12:29:59.473 - Arduino: Solenoid pin state: 0
+12:29:59.477 - Arduino: bar: 3
+12:29:59.477 - Arduino: lick: 9
+12:29:59.481 - Arduino: Solenoid pin state: 0
+12:29:59.485 - Arduino: bar: 4
+12:29:59.485 - Arduino: lick: 8
+12:29:59.485 - Arduino: Solenoid pin state: 0
+12:29:59.489 - Arduino: bar: 3
+12:29:59.494 - Arduino: lick: 9
+12:29:59.494 - Arduino: Solenoid pin state: 0
+12:29:59.498 - Arduino: bar: 3
+12:29:59.498 - Arduino: lick: 9
+12:29:59.502 - Arduino: Solenoid pin state: 0
+12:29:59.506 - Arduino: bar: 3
+12:29:59.506 - Arduino: lick: 8
+12:29:59.506 - Arduino: Solenoid pin state: 0
+12:29:59.510 - Arduino: bar: 4
+12:29:59.510 - Arduino: lick: 9
+12:29:59.514 - Arduino: Solenoid pin state: 0
+12:29:59.518 - Arduino: bar: 3
+12:29:59.518 - Arduino: lick: 9
+12:29:59.518 - Arduino: Solenoid pin state: 0
+12:29:59.522 - Arduino: bar: 3
+12:29:59.522 - Arduino: lick: 9
+12:29:59.526 - Arduino: Solenoid pin state: 0
+12:29:59.530 - Arduino: bar: 3
+12:29:59.530 - Arduino: lick: 9
+12:29:59.534 - Arduino: Solenoid pin state: 0
+12:29:59.538 - Arduino: bar: 2
+12:29:59.539 - Arduino: lick: 8
+12:29:59.539 - Arduino: Solenoid pin state: 0
+12:29:59.543 - Arduino: bar: 4
+12:29:59.543 - Arduino: lick: 8
+12:29:59.547 - Arduino: Solenoid pin state: 0
+12:29:59.551 - Arduino: bar: 2
+12:29:59.551 - Arduino: lick: 8
+12:29:59.551 - Arduino: Solenoid pin state: 0
+12:29:59.555 - Arduino: bar: 3
+12:29:59.555 - Arduino: lick: 8
+12:29:59.559 - Arduino: Solenoid pin state: 0
+12:29:59.563 - Arduino: bar: 3
+12:29:59.563 - Arduino: lick: 9
+12:29:59.567 - Arduino: Solenoid pin state: 0
+12:29:59.567 - Arduino: bar: 3
+12:29:59.571 - Arduino: lick: 8
+12:29:59.572 - Arduino: Solenoid pin state: 0
+12:29:59.575 - Arduino: bar: 4
+12:29:59.576 - Arduino: lick: 9
+12:29:59.580 - Arduino: Solenoid pin state: 0
+12:29:59.584 - Arduino: bar: 3
+12:29:59.584 - Arduino: lick: 9
+12:29:59.584 - Arduino: Solenoid pin state: 0
+12:29:59.588 - Arduino: bar: 3
+12:29:59.588 - Arduino: lick: 9
+12:29:59.592 - Arduino: Solenoid pin state: 0
+12:29:59.596 - Arduino: bar: 4
+12:29:59.596 - Arduino: lick: 8
+12:29:59.600 - Arduino: Solenoid pin state: 0
+12:29:59.600 - Arduino: bar: 2
+12:29:59.604 - Arduino: lick: 9
+12:29:59.604 - Arduino: Solenoid pin state: 0
+12:29:59.608 - Arduino: bar: 2
+12:29:59.608 - Arduino: lick: 8
+12:29:59.612 - Arduino: Solenoid pin state: 0
+12:29:59.616 - Arduino: bar: 3
+12:29:59.616 - Arduino: lick: 9
+12:29:59.616 - Arduino: Solenoid pin state: 0
+12:29:59.621 - Arduino: bar: 3
+12:29:59.621 - Arduino: lick: 9
+12:29:59.625 - Arduino: Solenoid pin state: 0
+12:29:59.629 - Arduino: bar: 4
+12:29:59.629 - Arduino: lick: 9
+12:29:59.633 - Arduino: Solenoid pin state: 0
+12:29:59.633 - Arduino: bar: 4
+12:29:59.637 - Arduino: lick: 9
+12:29:59.637 - Arduino: Solenoid pin state: 0
+12:29:59.641 - Arduino: bar: 3
+12:29:59.641 - Arduino: lick: 9
+12:29:59.645 - Arduino: Solenoid pin state: 0
+12:29:59.650 - Arduino: bar: 3
+12:29:59.650 - Arduino: lick: 9
+12:29:59.650 - Arduino: Solenoid pin state: 0
+12:29:59.653 - Arduino: bar: 4
+12:29:59.653 - Arduino: lick: 9
+12:29:59.658 - Arduino: Solenoid pin state: 0
+12:29:59.661 - Arduino: bar: 3
+12:29:59.661 - Arduino: lick: 9
+12:29:59.665 - Arduino: Solenoid pin state: 0
+12:29:59.665 - Arduino: bar: 3
+12:29:59.670 - Arduino: lick: 9
+12:29:59.670 - Arduino: Solenoid pin state: 0
+12:29:59.674 - Arduino: bar: 3
+12:29:59.674 - Arduino: lick: 9
+12:29:59.678 - Arduino: Solenoid pin state: 0
+12:29:59.682 - Arduino: bar: 3
+12:29:59.682 - Arduino: lick: 8
+12:29:59.682 - Arduino: Solenoid pin state: 0
+12:29:59.686 - Arduino: bar: 3
+12:29:59.686 - Arduino: lick: 9
+12:29:59.690 - Arduino: Solenoid pin state: 0
+12:29:59.694 - Arduino: bar: 3
+12:29:59.694 - Arduino: lick: 9
+12:29:59.694 - Arduino: Solenoid pin state: 0
+12:29:59.698 - Arduino: bar: 3
+12:29:59.702 - Arduino: lick: 9
+12:29:59.702 - Arduino: Solenoid pin state: 0
+12:29:59.707 - Arduino: bar: 3
+12:29:59.707 - Arduino: lick: 9
+12:29:59.711 - Arduino: Solenoid pin state: 0
+12:29:59.715 - Arduino: bar: 3
+12:29:59.715 - Arduino: lick: 9
+12:29:59.715 - Arduino: Solenoid pin state: 0
+12:29:59.719 - Arduino: bar: 3
+12:29:59.719 - Arduino: lick: 9
+12:29:59.723 - Arduino: Solenoid pin state: 0
+12:29:59.727 - Arduino: bar: 3
+12:29:59.727 - Arduino: lick: 9
+12:29:59.727 - Arduino: Solenoid pin state: 0
+12:29:59.731 - Arduino: bar: 3
+12:29:59.735 - Arduino: lick: 9
+12:29:59.735 - Arduino: Solenoid pin state: 0
+12:29:59.739 - Arduino: bar: 3
+12:29:59.739 - Arduino: lick: 9
+12:29:59.743 - Arduino: Solenoid pin state: 0
+12:29:59.748 - Arduino: bar: 3
+12:29:59.748 - Arduino: lick: 9
+12:29:59.748 - Arduino: Solenoid pin state: 0
+12:29:59.752 - Arduino: bar: 3
+12:29:59.752 - Arduino: lick: 9
+12:29:59.756 - Arduino: Solenoid pin state: 0
+12:29:59.760 - Arduino: bar: 3
+12:29:59.760 - Arduino: lick: 9
+12:29:59.760 - Arduino: Solenoid pin state: 0
+12:29:59.764 - Arduino: bar: 3
+12:29:59.768 - Arduino: lick: 9
+12:29:59.768 - Arduino: Solenoid pin state: 0
+12:29:59.772 - Arduino: bar: 3
+12:29:59.772 - Arduino: lick: 9
+12:29:59.776 - Arduino: Solenoid pin state: 0
+12:29:59.780 - Arduino: bar: 4
+12:29:59.780 - Arduino: lick: 8
+12:29:59.780 - Arduino: Solenoid pin state: 0
+12:29:59.784 - Arduino: bar: 3
+12:29:59.784 - Arduino: lick: 9
+12:29:59.788 - Arduino: Solenoid pin state: 0
+12:29:59.792 - Arduino: bar: 3
+12:29:59.792 - Arduino: lick: 9
+12:29:59.793 - Arduino: Solenoid pin state: 0
+12:29:59.796 - Arduino: bar: 4
+12:29:59.800 - Arduino: lick: 8
+12:29:59.801 - Arduino: Solenoid pin state: 0
+12:29:59.805 - Arduino: bar: 2
+12:29:59.805 - Arduino: lick: 9
+12:29:59.809 - Arduino: Solenoid pin state: 0
+12:29:59.813 - Arduino: bar: 3
+12:29:59.813 - Arduino: lick: 8
+12:29:59.814 - Arduino: Solenoid pin state: 0
+12:29:59.817 - Arduino: bar: 3
+12:29:59.817 - Arduino: lick: 9
+12:29:59.821 - Arduino: Solenoid pin state: 0
+12:29:59.826 - Arduino: bar: 2
+12:29:59.826 - Arduino: lick: 9
+12:29:59.826 - Arduino: Solenoid pin state: 0
+12:29:59.829 - Arduino: bar: 3
+12:29:59.834 - Arduino: lick: 9
+12:29:59.834 - Arduino: Solenoid pin state: 0
+12:29:59.838 - Arduino: bar: 3
+12:29:59.838 - Arduino: lick: 8
+12:29:59.842 - Arduino: Solenoid pin state: 0
+12:29:59.846 - Arduino: bar: 4
+12:29:59.846 - Arduino: lick: 9
+12:29:59.846 - Arduino: Solenoid pin state: 0
+12:29:59.850 - Arduino: bar: 2
+12:29:59.850 - Arduino: lick: 8
+12:29:59.854 - Arduino: Solenoid pin state: 0
+12:29:59.858 - Arduino: bar: 3
+12:29:59.858 - Arduino: lick: 8
+12:29:59.859 - Arduino: Solenoid pin state: 0
+12:29:59.862 - Arduino: bar: 3
+12:29:59.866 - Arduino: lick: 9
+12:29:59.867 - Arduino: Solenoid pin state: 0
+12:29:59.871 - Arduino: bar: 2
+12:29:59.871 - Arduino: lick: 8
+12:29:59.875 - Arduino: Solenoid pin state: 0
+12:29:59.879 - Arduino: bar: 2
+12:29:59.879 - Arduino: lick: 9
+12:29:59.879 - Arduino: Solenoid pin state: 0
+12:29:59.883 - Arduino: bar: 4
+12:29:59.883 - Arduino: lick: 8
+12:29:59.887 - Arduino: Solenoid pin state: 0
+12:29:59.891 - Arduino: bar: 2
+12:29:59.891 - Arduino: lick: 9
+12:29:59.892 - Arduino: Solenoid pin state: 0
+12:29:59.895 - Arduino: bar: 4
+12:29:59.899 - Arduino: lick: 9
+12:29:59.899 - Arduino: Solenoid pin state: 0
+12:29:59.903 - Arduino: bar: 3
+12:29:59.903 - Arduino: lick: 9
+12:29:59.907 - Arduino: Solenoid pin state: 0
+12:29:59.911 - Arduino: bar: 3
+12:29:59.911 - Arduino: lick: 9
+12:29:59.911 - Arduino: Solenoid pin state: 0
+12:29:59.915 - Arduino: bar: 4
+12:29:59.915 - Arduino: lick: 8
+12:29:59.919 - Arduino: Solenoid pin state: 0
+12:29:59.923 - Arduino: bar: 2
+12:29:59.923 - Arduino: lick: 9
+12:29:59.924 - Arduino: Solenoid pin state: 0
+12:29:59.927 - Arduino: bar: 2
+12:29:59.931 - Arduino: lick: 9
+12:29:59.932 - Arduino: Solenoid pin state: 0
+12:29:59.936 - Arduino: bar: 4
+12:29:59.936 - Arduino: lick: 8
+12:29:59.940 - Arduino: Solenoid pin state: 0
+12:29:59.944 - Arduino: bar: 4
+12:29:59.944 - Arduino: lick: 9
+12:29:59.945 - Arduino: Solenoid pin state: 0
+12:29:59.948 - Arduino: bar: 3
+12:29:59.949 - Arduino: lick: 9
+12:29:59.952 - Arduino: Solenoid pin state: 0
+12:29:59.957 - Arduino: bar: 3
+12:29:59.957 - Arduino: lick: 8
+12:29:59.957 - Arduino: Solenoid pin state: 0
+12:29:59.961 - Arduino: bar: 3
+12:29:59.961 - Arduino: lick: 8
+12:29:59.965 - Arduino: Solenoid pin state: 0
+12:29:59.969 - Arduino: bar: 3
+12:29:59.969 - Arduino: lick: 9
+12:29:59.973 - Arduino: Solenoid pin state: 0
+12:29:59.973 - Arduino: bar: 3
+12:29:59.977 - Arduino: lick: 8
+12:29:59.977 - Arduino: Solenoid pin state: 0
+12:29:59.981 - Arduino: bar: 3
+12:29:59.981 - Arduino: lick: 8
+12:29:59.985 - Arduino: Solenoid pin state: 0
+12:29:59.989 - Arduino: bar: 3
+12:29:59.989 - Arduino: lick: 8
+12:29:59.990 - Arduino: Solenoid pin state: 0
+12:29:59.993 - Arduino: bar: 3
+12:29:59.993 - Arduino: lick: 8
+12:29:59.998 - Arduino: Solenoid pin state: 0
+12:30:00.002 - Arduino: bar: 4
+12:30:00.002 - Arduino: lick: 8
+12:30:00.005 - Arduino: Solenoid pin state: 0
+12:30:00.005 - Arduino: bar: 3
+12:30:00.010 - Arduino: lick: 9
+12:30:00.010 - Arduino: Solenoid pin state: 0
+12:30:00.014 - Arduino: bar: 2
+12:30:00.014 - Arduino: lick: 9
+12:30:00.018 - Arduino: Solenoid pin state: 0
+12:30:00.022 - Arduino: bar: 3
+12:30:00.022 - Arduino: lick: 9
+12:30:00.023 - Arduino: Solenoid pin state: 0
+12:30:00.026 - Arduino: bar: 3
+12:30:00.026 - Arduino: lick: 9
+12:30:00.030 - Arduino: Solenoid pin state: 0
+12:30:00.034 - Arduino: bar: 3
+12:30:00.034 - Arduino: lick: 9
+12:30:00.038 - Arduino: Solenoid pin state: 0
+12:30:00.038 - Arduino: bar: 2
+12:30:00.042 - Arduino: lick: 9
+12:30:00.043 - Arduino: Solenoid pin state: 0
+12:30:00.047 - Arduino: bar: 3
+12:30:00.047 - Arduino: lick: 8
+12:30:00.051 - Arduino: Solenoid pin state: 0
+12:30:00.055 - Arduino: bar: 4
+12:30:00.055 - Arduino: lick: 8
+12:30:00.055 - Arduino: Solenoid pin state: 0
+12:30:00.059 - Arduino: bar: 3
+12:30:00.059 - Arduino: lick: 9
+12:30:00.063 - Arduino: Solenoid pin state: 0
+12:30:00.067 - Arduino: bar: 4
+12:30:00.067 - Arduino: lick: 9
+12:30:00.071 - Arduino: Solenoid pin state: 0
+12:30:00.071 - Arduino: bar: 3
+12:30:00.075 - Arduino: lick: 9
+12:30:00.075 - Arduino: Solenoid pin state: 0
+12:30:00.079 - Arduino: bar: 3
+12:30:00.079 - Arduino: lick: 8
+12:30:00.083 - Arduino: Solenoid pin state: 0
+12:30:00.088 - Arduino: bar: 4
+12:30:00.088 - Arduino: lick: 8
+12:30:00.088 - Arduino: Solenoid pin state: 0
+12:30:00.091 - Arduino: bar: 3
+12:30:00.092 - Arduino: lick: 8
+12:30:00.096 - Arduino: Solenoid pin state: 0
+12:30:00.100 - Arduino: bar: 3
+12:30:00.100 - Arduino: lick: 9
+12:30:00.104 - Arduino: Solenoid pin state: 0
+12:30:00.104 - Arduino: bar: 2
+12:30:00.108 - Arduino: lick: 9
+12:30:00.108 - Arduino: Solenoid pin state: 0
+12:30:00.112 - Arduino: bar: 3
+12:30:00.112 - Arduino: lick: 9
+12:30:00.116 - Arduino: Solenoid pin state: 0
+12:30:00.120 - Arduino: bar: 3
+12:30:00.120 - Arduino: lick: 9
+12:30:00.120 - Arduino: Solenoid pin state: 0
+12:30:00.124 - Arduino: bar: 3
+12:30:00.124 - Arduino: lick: 8
+12:30:00.128 - Arduino: Solenoid pin state: 0
+12:30:00.132 - Arduino: bar: 3
+12:30:00.132 - Arduino: lick: 9
+12:30:00.132 - Arduino: Solenoid pin state: 0
+12:30:00.136 - Arduino: bar: 3
+12:30:00.140 - Arduino: lick: 8
+12:30:00.140 - Arduino: Solenoid pin state: 0
+12:30:00.144 - Arduino: bar: 2
+12:30:00.144 - Arduino: lick: 9
+12:30:00.148 - Arduino: Solenoid pin state: 0
+12:30:00.153 - Arduino: bar: 4
+12:30:00.153 - Arduino: lick: 8
+12:30:00.153 - Arduino: Solenoid pin state: 0
+12:30:00.156 - Arduino: bar: 3
+12:30:00.157 - Arduino: lick: 9
+12:30:00.161 - Arduino: Solenoid pin state: 0
+12:30:00.165 - Arduino: bar: 3
+12:30:00.165 - Arduino: lick: 10
+12:30:00.165 - Arduino: Solenoid pin state: 0
+12:30:00.169 - Arduino: bar: 4
+12:30:00.173 - Arduino: lick: 8
+12:30:00.173 - Arduino: Solenoid pin state: 0
+12:30:00.177 - Arduino: bar: 3
+12:30:00.177 - Arduino: lick: 8
+12:30:00.181 - Arduino: Solenoid pin state: 0
+12:30:00.185 - Arduino: bar: 3
+12:30:00.186 - Arduino: lick: 8
+12:30:00.186 - Arduino: Solenoid pin state: 0
+12:30:00.189 - Arduino: bar: 3
+12:30:00.189 - Arduino: lick: 9
+12:30:00.194 - Arduino: Solenoid pin state: 0
+12:30:00.198 - Arduino: bar: 3
+12:30:00.198 - Arduino: lick: 9
+12:30:00.198 - Arduino: Solenoid pin state: 0
+12:30:00.202 - Arduino: bar: 4
+12:30:00.206 - Arduino: lick: 8
+12:30:00.206 - Arduino: Solenoid pin state: 0
+12:30:00.210 - Arduino: bar: 3
+12:30:00.210 - Arduino: lick: 9
+12:30:00.214 - Arduino: Solenoid pin state: 0
+12:30:00.218 - Arduino: bar: 3
+12:30:00.218 - Arduino: lick: 9
+12:30:00.219 - Arduino: Solenoid pin state: 0
+12:30:00.222 - Arduino: bar: 3
+12:30:00.222 - Arduino: lick: 9
+12:30:00.226 - Arduino: Solenoid pin state: 0
+12:30:00.231 - Arduino: bar: 2
+12:30:00.231 - Arduino: lick: 9
+12:30:00.231 - Arduino: Solenoid pin state: 0
+12:30:00.234 - Arduino: bar: 3
+12:30:00.239 - Arduino: lick: 8
+12:30:00.239 - Arduino: Solenoid pin state: 0
+12:30:00.243 - Arduino: bar: 4
+12:30:00.243 - Arduino: lick: 9
+12:30:00.247 - Arduino: Solenoid pin state: 0
+12:30:00.251 - Arduino: bar: 3
+12:30:00.251 - Arduino: lick: 9
+12:30:00.251 - Arduino: Solenoid pin state: 0
+12:30:00.255 - Arduino: bar: 3
+12:30:00.255 - Arduino: lick: 8
+12:30:00.259 - Arduino: Solenoid pin state: 0
+12:30:00.263 - Arduino: bar: 2
+12:30:00.263 - Arduino: lick: 9
+12:30:00.264 - Arduino: Solenoid pin state: 0
+12:30:00.267 - Arduino: bar: 4
+12:30:00.271 - Arduino: lick: 9
+12:30:00.272 - Arduino: Solenoid pin state: 0
+12:30:00.276 - Arduino: bar: 3
+12:30:00.276 - Arduino: lick: 9
+12:30:00.280 - Arduino: Solenoid pin state: 0
+12:30:00.284 - Arduino: bar: 3
+12:30:00.285 - Arduino: lick: 9
+12:30:00.285 - Arduino: Solenoid pin state: 0
+12:30:00.288 - Arduino: bar: 3
+12:30:00.288 - Arduino: lick: 8
+12:30:00.293 - Arduino: Solenoid pin state: 0
+12:30:00.296 - Arduino: bar: 3
+12:30:00.297 - Arduino: lick: 8
+12:30:00.297 - Arduino: Solenoid pin state: 0
+12:30:00.300 - Arduino: bar: 4
+12:30:00.304 - Arduino: lick: 8
+12:30:00.304 - Arduino: Solenoid pin state: 0
+12:30:00.308 - Arduino: bar: 3
+12:30:00.309 - Arduino: lick: 9
+12:30:00.312 - Arduino: Solenoid pin state: 0
+12:30:00.317 - Arduino: bar: 3
+12:30:00.317 - Arduino: lick: 9
+12:30:00.317 - Arduino: Solenoid pin state: 0
+12:30:00.321 - Arduino: bar: 3
+12:30:00.321 - Arduino: lick: 8
+12:30:00.325 - Arduino: Solenoid pin state: 0
+12:30:00.329 - Arduino: bar: 3
+12:30:00.329 - Arduino: lick: 9
+12:30:00.329 - Arduino: Solenoid pin state: 0
+12:30:00.333 - Arduino: bar: 4
+12:30:00.337 - Arduino: lick: 9
+12:30:00.337 - Arduino: Solenoid pin state: 0
+12:30:00.341 - Arduino: bar: 3
+12:30:00.341 - Arduino: lick: 9
+12:30:00.345 - Arduino: Solenoid pin state: 0
+12:30:00.349 - Arduino: bar: 3
+12:30:00.350 - Arduino: lick: 9
+12:30:00.350 - Arduino: Solenoid pin state: 0
+12:30:00.353 - Arduino: bar: 3
+12:30:00.354 - Arduino: lick: 8
+12:30:00.357 - Arduino: Solenoid pin state: 0
+12:30:00.362 - Arduino: bar: 2
+12:30:00.362 - Arduino: lick: 9
+12:30:00.362 - Arduino: Solenoid pin state: 0
+12:30:00.366 - Arduino: bar: 3
+12:30:00.369 - Arduino: lick: 8
+12:30:00.369 - Arduino: Solenoid pin state: 0
+12:30:00.374 - Arduino: bar: 3
+12:30:00.374 - Arduino: lick: 8
+12:30:00.378 - Arduino: Solenoid pin state: 0
+12:30:00.383 - Arduino: bar: 3
+12:30:00.383 - Arduino: lick: 8
+12:30:00.383 - Arduino: Solenoid pin state: 0
+12:30:00.386 - Arduino: bar: 3
+12:30:00.386 - Arduino: lick: 8
+12:30:00.390 - Arduino: Solenoid pin state: 0
+12:30:00.395 - Arduino: bar: 3
+12:30:00.395 - Arduino: lick: 9
+12:30:00.395 - Arduino: Solenoid pin state: 0
+12:30:00.399 - Arduino: bar: 3
+12:30:00.399 - Arduino: lick: 9
+12:30:00.403 - Arduino: Solenoid pin state: 0
+12:30:00.407 - Arduino: bar: 4
+12:30:00.407 - Arduino: lick: 8
+12:30:00.411 - Arduino: Solenoid pin state: 0
+12:30:00.415 - Arduino: bar: 2
+12:30:00.415 - Arduino: lick: 9
+12:30:00.415 - Arduino: Solenoid pin state: 0
+12:30:00.419 - Arduino: bar: 3
+12:30:00.419 - Arduino: lick: 9
+12:30:00.423 - Arduino: Solenoid pin state: 0
+12:30:00.427 - Arduino: bar: 3
+12:30:00.427 - Arduino: lick: 9
+12:30:00.427 - Arduino: Solenoid pin state: 0
+12:30:00.431 - Arduino: bar: 3
+12:30:00.431 - Arduino: lick: 9
+12:30:00.435 - Arduino: Solenoid pin state: 0
+12:30:00.439 - Arduino: bar: 3
+12:30:00.439 - Arduino: lick: 8
+12:30:00.443 - Arduino: Solenoid pin state: 0
+12:30:00.443 - Arduino: bar: 3
+12:30:00.448 - Arduino: lick: 9
+12:30:00.448 - Arduino: Solenoid pin state: 0
+12:30:00.452 - Arduino: bar: 3
+12:30:00.452 - Arduino: lick: 8
+12:30:00.456 - Arduino: Solenoid pin state: 0
+12:30:00.460 - Arduino: bar: 3
+12:30:00.460 - Arduino: lick: 8
+12:30:00.460 - Arduino: Solenoid pin state: 0
+12:30:00.464 - Arduino: bar: 3
+12:30:00.464 - Arduino: lick: 9
+12:30:00.468 - Arduino: Solenoid pin state: 0
+12:30:00.472 - Arduino: bar: 4
+12:30:00.472 - Arduino: lick: 8
+12:30:00.476 - Arduino: Solenoid pin state: 0
+12:30:00.476 - Arduino: bar: 3
+12:30:00.480 - Arduino: lick: 8
+12:30:00.481 - Arduino: Solenoid pin state: 0
+12:30:00.484 - Arduino: bar: 3
+12:30:00.484 - Arduino: lick: 9
+12:30:00.488 - Arduino: Solenoid pin state: 0
+12:30:00.493 - Arduino: bar: 4
+12:30:00.493 - Arduino: lick: 9
+12:30:00.493 - Arduino: Solenoid pin state: 0
+12:30:00.497 - Arduino: bar: 3
+12:30:00.497 - Arduino: lick: 8
+12:30:00.501 - Arduino: Solenoid pin state: 0
+12:30:00.505 - Arduino: bar: 3
+12:30:00.505 - Arduino: lick: 8
+12:30:00.509 - Arduino: Solenoid pin state: 0
+12:30:00.509 - Arduino: bar: 4
+12:30:00.514 - Arduino: lick: 9
+12:30:00.514 - Arduino: Solenoid pin state: 0
+2025-03-07 12:30:00.517 - Interrupted by user. Sent stop command to Arduino.

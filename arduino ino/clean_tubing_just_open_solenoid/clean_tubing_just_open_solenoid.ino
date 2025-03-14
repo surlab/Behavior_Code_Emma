@@ -1,6 +1,6 @@
 const long BAUD = 115200;
 const int solenoidPin = 5; // Pin for solenoid
-const int solenoidLED = 10; // Reporter LED for solenoid activation
+const int solenoidLED = 13; // Reporter LED for solenoid activation
 const unsigned long duration = 60000; // Total duration of 60 seconds
 const unsigned long valve_open = 500; //msec, time valve is open should be calibrated.
 const unsigned long interval = 2500-valve_open; // Interval of 2.5 seconds
