@@ -14,7 +14,7 @@ const int SOLENOID_PIN = 5;
 const int SOLENOID_LED = 13;
 
 // opto trigger pin 
-const int TRIGGER_OPTO = 4;
+const int TRIGGER_OPTO = ##;
 
 // Define the send and receive pins for the capacitive sensors
 const int SENSOR_SEND_1 = 6;
@@ -46,9 +46,6 @@ bool sol_open = false;
 unsigned long sol_start_time = 0;
 unsigned long sol_duration = 0;
 const int set_sol_duration = 40; //msec
-
-//opto control variables
-const int chance_opto = 30; //percent chance of opto trial
 bool opto_t_on = false;
 unsigned long opto_t_start = 0;
 unsigned long opto_t_dur = 0;
@@ -89,7 +86,7 @@ void loop() {
     } else if (command == 'O') {
       arduino_doing_things = true;
       opto_trigger_active = true;
-      Serial.println("Arduino doing OPTO things, Arduino started. \n primary arduino uno will send trigger signal to secondary nano. \n nano controls opto duration, frequency, duty cycle, etc. ");
+      Serial.println("Arduino doing OPTO things, Arduino started. \n main arduino will send trigger signal to micro. ");
       Serial.println("touch duration: " + String(set_touch_duration) + "ms");
       Serial.println("solenoid open for " + String(set_sol_duration) + "ms");
     } else if (command == 'X') {
@@ -155,7 +152,7 @@ void loop() {
           sol_open = true;
           Serial.println("Solenoid Activated");
           //if opto session,30% chance to send opto trigger signal to micro
-          if (opto_trigger_active && (random(100) < chance_opto)) {
+          if (opto_trigger_active && (random(100) < 30)) {
             digitalWrite(TRIGGER_OPTO, HIGH);
             opto_t_start = millis();
             opto_t_on = true;
@@ -205,7 +202,7 @@ void loop() {
     opto_t_dur = millis() - opto_t_start;
     if (opto_t_on && (opto_t_dur > opto_trigger_duration)) {
       digitalWrite(TRIGGER_OPTO, LOW);
-      opto_t_on = false; // end trigger signal
+      opto_t_on = false;
       opto_t_start = millis();//not necessary
     }
 

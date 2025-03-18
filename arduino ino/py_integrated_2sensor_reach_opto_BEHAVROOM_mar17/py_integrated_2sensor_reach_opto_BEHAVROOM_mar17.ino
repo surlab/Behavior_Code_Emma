@@ -39,13 +39,13 @@ long sensorValue_2 = 0;
 bool touch_active = false;
 unsigned long touch_start_time = 0;
 unsigned long touch_duration = 0;
-const int set_touch_duration = 1500;
+const int set_touch_duration = 3000;
 
 // Solenoid control variables
 bool sol_open = false;
 unsigned long sol_start_time = 0;
 unsigned long sol_duration = 0;
-const int set_sol_duration = 40; //msec
+const int set_sol_duration = 55; //msec
 
 //opto control variables
 const int chance_opto = 30; //percent chance of opto trial
@@ -53,11 +53,6 @@ bool opto_t_on = false;
 unsigned long opto_t_start = 0;
 unsigned long opto_t_dur = 0;
 const int opto_trigger_duration = 10;//msec
-
-
-// For tracking sensor 2 activity during the last three solenoid openings
-bool sensor2_activity[3] = {true, true, true};  // Initially set to true to allow the first three trials
-int activity_index = 0;
 
 // For checking solenoid pin status
 int pinState = 0;
@@ -126,8 +121,6 @@ void loop() {
 
     if (sensorValue_2 > threshold_center_2) {
       digitalWrite(OUT_TO_LED_2, HIGH);
-      // Update sensor2_activity if a touch is detected
-      sensor2_activity[activity_index] = true;
     } else {
       digitalWrite(OUT_TO_LED_2, LOW);
     }
@@ -138,43 +131,25 @@ void loop() {
         touch_start_time = millis();
       }
       touch_duration = millis() - touch_start_time;
-      if (touch_duration > set_touch_duration) {
-        // Check if at least one of the last three sensor 2 activities detected a touch
-        bool allow_solenoid_opening = false;
-        for (int i = 0; i < 3; i++) {
-          if (sensor2_activity[i]) {
-            allow_solenoid_opening = true;
-            break;
-          }
+      if (touch_duration > set_touch_duration && !sol_open) {
+        //if opto session,30% chance to send opto trigger signal to micro
+        if (opto_trigger_active && (random(100) < chance_opto)) {
+          digitalWrite(TRIGGER_OPTO, HIGH);
+          opto_t_start = millis();
+          opto_t_on = true;
+          Serial.println("Opto trigger signal sent to micro");
         }
 
-        if (allow_solenoid_opening) {
-          digitalWrite(SOLENOID_PIN, HIGH);
-          digitalWrite(SOLENOID_LED, HIGH);
-          sol_start_time = millis();
-          sol_open = true;
-          Serial.println("Solenoid Activated");
-          //if opto session,30% chance to send opto trigger signal to micro
-          if (opto_trigger_active && (random(100) < chance_opto)) {
-            digitalWrite(TRIGGER_OPTO, HIGH);
-            opto_t_start = millis();
-            opto_t_on = true;
-            Serial.println("Opto trigger signal sent to micro");
-          }
-        
+        //open solenoid (after opto trigger in case there is any delay)
+        digitalWrite(SOLENOID_PIN, HIGH);
+        digitalWrite(SOLENOID_LED, HIGH);
+        sol_start_time = millis();
+        sol_open = true;
+        Serial.println("Solenoid Activated");
 
-          // Move to the next activity_index for the next cycle
-          activity_index = (activity_index + 1) % 3;
-
-          // Update sensor2_activity array
-          sensor2_activity[activity_index] = false; // After opening, reset the current index to false
-
-          // Reset touch sensor(1/bar) timer
-          touch_start_time = millis();
-          touch_duration = 0;
-        } else {
-          Serial.println("Solenoid Blocked: No touch detected at lick sensor in the last 3 solenoid activations.");
-        }
+        // Reset touch sensor(1/bar) timer
+        touch_start_time = millis();
+        touch_duration = 0;
       }
     } else {
       if (touch_active) {
@@ -194,13 +169,7 @@ void loop() {
       sol_open = false;
       sol_start_time = millis(); //not necessary
     }
-    // If more than 10 seconds pass since the last solenoid opening, reset sensor2_activity to true
-    if (sol_duration > 10000) {
-      for (int i = 0; i < 3; i++) {
-        sensor2_activity[i] = true;
-      }
-      Serial.println("Sensor2 activity reset due to 10 seconds timeout.");
-    }
+
     //turn off opto trigger after opto_trigger_duration
     opto_t_dur = millis() - opto_t_start;
     if (opto_t_on && (opto_t_dur > opto_trigger_duration)) {
