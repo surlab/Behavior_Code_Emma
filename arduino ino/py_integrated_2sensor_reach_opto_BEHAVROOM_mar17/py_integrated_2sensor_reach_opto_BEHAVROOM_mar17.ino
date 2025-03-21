@@ -42,6 +42,7 @@ unsigned long touch_duration = 0;
 const int set_touch_duration = 3000;
 
 // Solenoid control variables
+bool allow_sol = false;
 bool sol_open = false;
 unsigned long sol_start_time = 0;
 unsigned long sol_duration = 0;
@@ -90,6 +91,7 @@ void loop() {
     } else if (command == 'X') {
       arduino_doing_things = false;
       opto_trigger_active = false;
+      allow_sol = false;
       Serial.println("Arduino not doing things, Arduino stopped");
       digitalWrite(OUT_TO_LED_1, LOW);
       digitalWrite(OUT_TO_LED_2, LOW);
@@ -132,14 +134,16 @@ void loop() {
       }
       touch_duration = millis() - touch_start_time;
       if (touch_duration > set_touch_duration && !sol_open) {
+        allow_sol = true;
         //if opto session,30% chance to send opto trigger signal to micro
         if (opto_trigger_active && (random(100) < chance_opto)) {
           digitalWrite(TRIGGER_OPTO, HIGH);
           opto_t_start = millis();
           opto_t_on = true;
           Serial.println("Opto trigger signal sent to micro");
+          allow_sol = false;
         }
-
+      if (allow_sol){
         //open solenoid (after opto trigger in case there is any delay)
         digitalWrite(SOLENOID_PIN, HIGH);
         digitalWrite(SOLENOID_LED, HIGH);
@@ -150,6 +154,7 @@ void loop() {
         // Reset touch sensor(1/bar) timer
         touch_start_time = millis();
         touch_duration = 0;
+      }
       }
     } else {
       if (touch_active) {
@@ -176,6 +181,7 @@ void loop() {
       digitalWrite(TRIGGER_OPTO, LOW);
       opto_t_on = false; // end trigger signal
       opto_t_start = millis();//not necessary
+      allow_sol=true;
     }
 
     delay(1);
